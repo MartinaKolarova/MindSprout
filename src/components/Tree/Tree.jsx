@@ -11,6 +11,13 @@ export const Tree = ({ category }) => {
     return exercise.targetId === phase;
   });
 
+  const getRandomSubset = (arr, size) => {
+    const shuffled = arr.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, size);
+  };
+
+  const subset = getRandomSubset(currentPhaseExercises, 3);
+
   useEffect(() => {
     if (category === 1) {
       const fetchExercises = async () => {
@@ -28,12 +35,14 @@ export const Tree = ({ category }) => {
   }
 
   return (
-    <div id="tree" className={styles.mainContainer}>
+    <div className={styles.mainContainer}>
       {category === 1 ? (
         <>
           <div className={styles.tree}></div>
           <div className={styles.bubbles}>
-            <Bubble />
+            {subset.map((exercise) => (
+              <Bubble exercise={exercise} key={exercise.id} />
+            ))}
           </div>
         </>
       ) : (
