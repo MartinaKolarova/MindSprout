@@ -7,10 +7,25 @@ import { Contact } from "@/components/Contact/Contact";
 import { Footer } from "@/components/Footer/Footer";
 import { Tree } from "@/components/Tree/Tree";
 import { TreeNavigation } from "@/components/TreeNavigation/TreeNavigation";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [phase, setPhase] = useState(1);
+  const [selected, setSelected] = useState(null);
+  const [exercises, setExercises] = useState([]);
+
+  useEffect(() => {
+    const fetchExercises = async () => {
+      const response = await fetch("");
+      const json = await response.json();
+      setRooms(json.data);
+    };
+
+    fetchExercises();
+  }, []);
+
   return (
     <>
       <Header></Header>
