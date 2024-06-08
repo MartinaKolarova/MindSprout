@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css';
 import { Header } from '@/components/Header/Header';
 import { Contact } from '@/components/Contact/Contact';
 import { Footer } from '@/components/Footer/Footer';
+import { Tree } from '@/components/Tree/Tree';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}></main>
       <Footer />
+      <Tree/>
     </>
   );
 }
