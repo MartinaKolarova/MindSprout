@@ -7,15 +7,24 @@ import { Contact } from "@/components/Contact/Contact";
 import { Footer } from "@/components/Footer/Footer";
 import { Tree } from "@/components/Tree/Tree";
 import { TreeNavigation } from "@/components/TreeNavigation/TreeNavigation";
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [chosenArea, setChosenArea] = useState(null);
+  const [chosenCategory, setChosenCategory] = useState(null);
+  const treeRef = useRef(null);
 
   const handleClick = (value) => {
-    setChosenArea(value);
+    setChosenCategory(value);
+    scrollToTree();
+  };
+  console.log(chosenCategory);
+
+  const scrollToTree = () => {
+    if (treeRef.current) {
+      treeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -30,8 +39,10 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <TreeNavigation onClick={handleClick} />
       </main>
+      <div ref={treeRef}>
+        <Tree category={chosenCategory} />
+      </div>
       <Footer />
-      <Tree />
     </>
   );
 }
