@@ -7,7 +7,7 @@ import { Contact } from "@/components/Contact/Contact";
 import { Footer } from "@/components/Footer/Footer";
 import { Tree } from "@/components/Tree/Tree";
 import { TreeNavigation } from "@/components/TreeNavigation/TreeNavigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,7 @@ export default function Home() {
     const fetchExercises = async () => {
       const response = await fetch("");
       const json = await response.json();
-      setRooms(json.data);
+      setExercises(json.data);
     };
 
     fetchExercises();
