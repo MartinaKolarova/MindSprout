@@ -12,7 +12,11 @@ import { useState, useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [chosen, setChosen] = useState(null);
+  const [chosenArea, setChosenArea] = useState(null);
+
+  const handleClick = (value) => {
+    setChosenArea(value);
+  };
 
   return (
     <>
@@ -24,7 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <TreeNavigation />
+        <TreeNavigation onClick={handleClick} />
       </main>
       <Footer />
       <Tree />

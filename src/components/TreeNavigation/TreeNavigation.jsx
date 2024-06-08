@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./style.module.css";
 import Link from "next/link";
 
-export const TreeNavigation = () => {
+export const TreeNavigation = ({ onClick }) => {
   return (
     <div className={styles.navContainer}>
       <div className={styles.textContainer}>
@@ -13,9 +13,15 @@ export const TreeNavigation = () => {
       </div>
       <div className={styles.arrow}></div>
       <div className={styles.buttonsContainer}>
-        <button className={styles.navButton}>Problém s vrstevníky</button>
-        <button className={styles.navButton}>Problém s rodinou</button>
-        <button className={styles.navButton}>Problém ve škole</button>
+        <button className={styles.navButton} onClick={() => onClick(1)}>
+          Problém s vrstevníky
+        </button>
+        <button className={styles.navButton} onClick={() => onClick(2)}>
+          Problém s rodinou
+        </button>
+        <button className={styles.navButton} onClick={() => onClick(3)}>
+          Problém ve škole
+        </button>
       </div>
     </div>
   );
