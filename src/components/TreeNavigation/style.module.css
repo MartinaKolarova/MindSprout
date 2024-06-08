@@ -1,0 +1,28 @@
+.navContainer{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textContainer{
+    display: flex;
+    background-color:lightblue ;
+    width: 80vw;
+    padding: 2%;
+}
+
+.arrow{
+    width: 90px;
+    height: 150px;
+    background-image: url(./rucnisipky.png) ;
+    background-size: cover;
+}
+.buttonsContainer{
+display: flex;
+flex-direction: column;
+gap: 10px
+;
+}
