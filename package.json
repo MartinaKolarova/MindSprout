@@ -12,7 +12,9 @@
     "next": "14.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-modal": "^3.16.1"
+    "react-modal": "^3.16.1",
+    "next-share": "^0.27.0"
+
   },
   "devDependencies": {
     "eslint": "^8",
