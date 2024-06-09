@@ -31,27 +31,61 @@ export const Tree = ({ category }) => {
     }
   }, [category]);
 
+  const handleFinishExercise = () => {
+    if (phase === 'stabilization') {
+      setPhase('selfperception');
+    } else if (phase === 'selfperception') {
+      setPhase('problemsolving');
+    } else if (phase === 'problemsolving') {
+      setPhase('userHasFinished');
+    }
+    setSelectedExercise(null);
+  };
+
   if (category === null) {
     return null;
+  } else if (category !== 1) {
+    return (
+      <p className={styles.apology}>Omlouváme se, na obsahu se dále pracuje.</p>
+    );
   }
+
+  const handleCloseExercise = () => {
+    setSelectedExercise(null);
+  };
 
   return (
     <div className={styles.mainContainer}>
-      {category === 1 ? (
+      {phase === 'userHasFinished' ? (
+        <>
+          <div>
+            <p>Ahoj</p>
+            <button></button>
+          </div>
+          <div>
+            <p></p>
+            <button></button>
+          </div>
+        </>
+      ) : (
         <>
           <div className={styles.tree}></div>
           <div className={styles.bubbles}>
             {subset.map((exercise) => (
-              <Bubble exercise={exercise} key={exercise.id} />
+              <Bubble
+                setSelectedExercise={setSelectedExercise}
+                exercise={exercise}
+                key={exercise.id}
+              />
             ))}
           </div>
         </>
-      ) : (
-        <p className={styles.apology}>
-          Omlouváme se, na obsahu se dále pracuje.
-        </p>
       )}
-      <Dialog />
+      <Dialog
+        exercise={selectedExercise}
+        closeExercise={handleCloseExercise}
+        finishExercise={handleFinishExercise}
+      />
     </div>
   );
 };

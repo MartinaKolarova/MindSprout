@@ -15,34 +15,17 @@ const customStyles = {
 };
 
 Modal.setAppElement('#__next');
-export const Dialog = () => {
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const openModal = () => {
-    setIsOpen(true);
-  };
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
+export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
       <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
+        isOpen={exercise}
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
+        <div>{exercise?.keyWords}</div>
+        <button onClick={finishExercise}>Relaxace ukončena</button>
+        <button onClick={closeExercise}>X</button>
       </Modal>
     </div>
   );

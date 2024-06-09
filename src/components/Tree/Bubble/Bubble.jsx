@@ -1,12 +1,12 @@
 import styles from './Bubble.module.css';
 
-export const Bubble = ({ exercise }) => {
+export const Bubble = ({ exercise, setSelectedExercise }) => {
   return (
-    <div className={styles.bubbleMain}>
-      <div className={styles.bubble}>
-        <p className={styles.bubbleName}>{exercise.keyWords}</p>
-        <button></button>
-      </div>
+    <div
+      onClick={() => setSelectedExercise(exercise)}
+      className={styles.bubble}
+    >
+      <p className={styles.bubbleName}>{exercise.keyWords}</p>
     </div>
   );
 };
