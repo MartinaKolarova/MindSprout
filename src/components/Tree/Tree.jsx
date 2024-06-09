@@ -1,14 +1,15 @@
-import { Bubble } from './Bubble/Bubble';
-import { Dialog } from './Dialog/Dialog';
-import styles from './Tree.module.css';
-import { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
+import { Bubble } from "./Bubble/Bubble";
+import { Dialog } from "./Dialog/Dialog";
+import styles from "./Tree.module.css";
+import { useState, useEffect, useMemo } from "react";
+import Link from "next/link";
 import {
   FacebookMessengerShareButton,
   FacebookMessengerIcon,
   FacebookShareButton,
   FacebookIcon,
-} from 'next-share';
+} from "next-share";
+import Image from "next/image";
 
 export const Tree = ({ category }) => {
   const [phase, setPhase] = useState("stabilization");
@@ -27,7 +28,22 @@ export const Tree = ({ category }) => {
     () => getRandomSubset(currentPhaseExercises, 3),
     [category, currentPhaseExercises.length]
   );
-  console.log(subset, currentPhaseExercises);
+
+  const determineTree = (phase) => {
+    if (phase === "stabilization") {
+      return "layer1.png";
+    } else if (phase === "selfperception") {
+      return "layer2.png";
+    } else if (phase === "problemsolving") {
+      return "layer3.png";
+    } else if (phase === "userHasFinished") {
+      return "layer4.png";
+    } else {
+      return null;
+    }
+  };
+
+  const currentTreeUrl = determineTree(phase);
 
   useEffect(() => {
     if (category === 1) {
@@ -66,6 +82,14 @@ export const Tree = ({ category }) => {
 
   return (
     <div className={styles.mainContainer}>
+      <Image
+        src={`/${currentTreeUrl}`}
+        alt="Rostoucí strom"
+        className={styles.treeImg}
+        width={70}
+        height={50}
+        priority
+      />
       {phase === "userHasFinished" ? (
         <>
           <div>
@@ -74,18 +98,18 @@ export const Tree = ({ category }) => {
               ji rád/a doporučil někomu jinému, můžeš nás sdílet.
             </p>
             <FacebookShareButton
-              url={'https://github.com/MartinaKolarova/MindSprout'}
+              url={"https://github.com/MartinaKolarova/MindSprout"}
               quote={
-                'MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví'
+                "MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví"
               }
-              hashtag={'#nextshare'}
+              hashtag={"#nextshare"}
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
 
             <FacebookMessengerShareButton
-              url={'https://github.com/MartinaKolarova/MindSprout'}
-              appId={''}
+              url={"https://github.com/MartinaKolarova/MindSprout"}
+              appId={""}
             >
               <FacebookMessengerIcon size={32} round />
             </FacebookMessengerShareButton>
