@@ -98,17 +98,17 @@ export const Tree = ({ category }) => {
               ji rád/a doporučil někomu jinému, můžeš nás sdílet.
             </p>
             <FacebookShareButton
-              url={"https://github.com/MartinaKolarova/MindSprout"}
+              url={"https://mind-sprout.vercel.app/"}
               quote={
                 "MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví"
               }
-              hashtag={"#nextshare"}
+              hashtag={"#mindsprout"}
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
 
             <FacebookMessengerShareButton
-              url={"https://github.com/MartinaKolarova/MindSprout"}
+              url={"https://mind-sprout.vercel.app/"}
               appId={""}
             >
               <FacebookMessengerIcon size={32} round />
