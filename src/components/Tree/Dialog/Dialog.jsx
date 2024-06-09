@@ -62,7 +62,7 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
           <button className={styles.finishbutton} onClick={finishExercise}>
             Relaxace ukončena
           </button>
-          {currentIndex < exercise?.content.text.length &&
+          {currentIndex < exercise?.content.text.length - 1 &&
           exercise?.content.text !== "" ? (
             <button className={styles.rightArrow} onClick={handleRight}>
               right

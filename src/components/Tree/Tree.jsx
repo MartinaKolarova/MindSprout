@@ -1,17 +1,18 @@
-import { Bubble } from './Bubble/Bubble';
-import { Dialog } from './Dialog/Dialog';
-import styles from './Tree.module.css';
-import { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
+import { Bubble } from "./Bubble/Bubble";
+import { Dialog } from "./Dialog/Dialog";
+import styles from "./Tree.module.css";
+import { useState, useEffect, useMemo } from "react";
+import Link from "next/link";
 import {
   FacebookMessengerShareButton,
   FacebookMessengerIcon,
   FacebookShareButton,
   FacebookIcon,
-} from 'next-share';
+} from "next-share";
+import Image from "next/image";
 
 export const Tree = ({ category }) => {
-  const [phase, setPhase] = useState('stabilization');
+  const [phase, setPhase] = useState("stabilization");
   const [selectedExercise, setSelectedExercise] = useState(null);
   const [exercises, setExercises] = useState([]);
   const currentPhaseExercises = exercises.filter((exercise) => {
@@ -25,14 +26,29 @@ export const Tree = ({ category }) => {
 
   const subset = useMemo(
     () => getRandomSubset(currentPhaseExercises, 3),
-    [category, currentPhaseExercises.length],
+    [category, currentPhaseExercises.length]
   );
-  console.log(subset, currentPhaseExercises);
+
+  const determineTree = (phase) => {
+    if (phase === "stabilization") {
+      return "layer1.png";
+    } else if (phase === "selfperception") {
+      return "layer2.png";
+    } else if (phase === "problemsolving") {
+      return "layer3.png";
+    } else if (phase === "userHasFinished") {
+      return "layer4.png";
+    } else {
+      return null;
+    }
+  };
+
+  const currentTreeUrl = determineTree(phase);
 
   useEffect(() => {
     if (category === 1) {
       const fetchExercises = async () => {
-        const response = await fetch('/api/friends');
+        const response = await fetch("/api/friends");
         const json = await response.json();
         setExercises(json);
       };
@@ -42,12 +58,12 @@ export const Tree = ({ category }) => {
   }, [category]);
 
   const handleFinishExercise = () => {
-    if (phase === 'stabilization') {
-      setPhase('selfperception');
-    } else if (phase === 'selfperception') {
-      setPhase('problemsolving');
-    } else if (phase === 'problemsolving') {
-      setPhase('userHasFinished');
+    if (phase === "stabilization") {
+      setPhase("selfperception");
+    } else if (phase === "selfperception") {
+      setPhase("problemsolving");
+    } else if (phase === "problemsolving") {
+      setPhase("userHasFinished");
     }
     setSelectedExercise(null);
   };
@@ -66,7 +82,15 @@ export const Tree = ({ category }) => {
 
   return (
     <div className={styles.mainContainer}>
-      {phase === 'userHasFinished' ? (
+      <Image
+        src={`/${currentTreeUrl}`}
+        alt="Rostoucí strom"
+        className={styles.treeImg}
+        width={70}
+        height={50}
+        priority
+      />
+      {phase === "userHasFinished" ? (
         <>
           <div>
             <p>
@@ -74,18 +98,18 @@ export const Tree = ({ category }) => {
               ji rád/a doporučil někomu jinému, můžeš nás sdílet.
             </p>
             <FacebookShareButton
-              url={'https://mind-sprout.vercel.app/'}
+              url={"https://mind-sprout.vercel.app/"}
               quote={
-                'MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví'
+                "MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví"
               }
-              hashtag={'#mindsprout'}
+              hashtag={"#mindsprout"}
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
 
             <FacebookMessengerShareButton
-              url={'https://mind-sprout.vercel.app/'}
-              appId={''}
+              url={"https://mind-sprout.vercel.app/"}
+              appId={""}
             >
               <FacebookMessengerIcon size={32} round />
             </FacebookMessengerShareButton>

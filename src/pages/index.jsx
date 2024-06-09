@@ -1,12 +1,12 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '@/styles/Home.module.css';
-import { Header } from '@/components/Header/Header';
-import { Contact } from '@/components/Contact/Contact';
-import { Footer } from '@/components/Footer/Footer';
-import { Tree } from '@/components/Tree/Tree';
-import { TreeNavigation } from '@/components/TreeNavigation/TreeNavigation';
-import { useState, useRef } from 'react';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "@/styles/Home.module.css";
+import { Header } from "@/components/Header/Header";
+import { Contact } from "@/components/Contact/Contact";
+import { Footer } from "@/components/Footer/Footer";
+import { Tree } from "@/components/Tree/Tree";
+import { TreeNavigation } from "@/components/TreeNavigation/TreeNavigation";
+import { useState, useRef } from "react";
 
 export default function Home() {
   const [chosenCategory, setChosenCategory] = useState(null);
@@ -14,15 +14,19 @@ export default function Home() {
 
   const handleClick = (value) => {
     setChosenCategory(value);
-    scrollToTree();
+    // scrollToTree();
   };
   console.log(chosenCategory);
 
-  const scrollToTree = () => {
-    if (treeRef.current) {
-      treeRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleBack = () => {
+    setChosenCategory(null);
   };
+
+  // const scrollToTree = () => {
+  //   if (treeRef.current) {
+  //     treeRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <>
@@ -37,7 +41,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <TreeNavigation onClick={handleClick} />
+        {chosenCategory !== null && <button onClick={handleBack}>zpět</button>}
+        {chosenCategory === null && <TreeNavigation onClick={handleClick} />}
       </main>
       <div ref={treeRef}>
         <Tree category={chosenCategory} />
