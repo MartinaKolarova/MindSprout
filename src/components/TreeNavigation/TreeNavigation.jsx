@@ -16,8 +16,8 @@ export const TreeNavigation = ({ onClick }) => {
           kterým se nebudeš cítit líp jenom ty, ale i náš strom, který nutně
           potřebuje pomoc
         </p>
+        <div className={styles.arrow}></div>
       </div>
-      <div className={styles.arrow}></div>
       <div className={styles.buttonsContainer}>
         <button className={styles.navButton} onClick={() => onClick(1)}>
           Problém s vrstevníky
