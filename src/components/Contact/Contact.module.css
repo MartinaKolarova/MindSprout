@@ -7,18 +7,38 @@
 
 .contact {
   background-image: linear-gradient(to bottom right, #F0F2FF, #F6EEFA);
-  border-radius: 20px;
   text-align: center;
   padding: 1rem;
-  line-height: 2;
-  width: 70vw
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 10px solid #F0F2FF;
+  box-shadow: inset 0 0 0 2px black; */
+  border-radius: 20px;
 }
 
-.phone {
+.contactButton {
   display: inline-block;
-  padding: 0.3rem;
-  background-color: #4B00D3;
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  background-color: #9000d3;
   border-radius: 20px;
   color: white;
-  width: 100px;
+  width: 120px;
+}
+
+@media (min-width: 768px) {
+  .contactMain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact {
+    width: 30vw;
+    height: 30vh;
+  }
 }
