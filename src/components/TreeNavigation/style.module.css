@@ -1,17 +1,23 @@
 .navContainer{
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background: linear-gradient(#f0f3fe, #ffffff);
+
 }
 
 .textContainer{
     display: flex;
-    background-color:lightblue ;
-    width: 80vw;
-    padding: 2%;
+    background-color: rgb(192, 217, 217);
+    border: 2px solid #000;   
+    border-radius: 10px; 
+    margin: 10px;
+    width: 90vw;
+    height: 30vh;
+    padding: 3%;
 }
 
 .arrow{
@@ -21,8 +27,20 @@
     background-size: cover;
 }
 .buttonsContainer{
-display: flex;
-flex-direction: column;
-gap: 10px
-;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navButton{
+    background-image: url(./button.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 70vw;
+    height: 10vh;
 }
