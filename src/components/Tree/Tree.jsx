@@ -11,7 +11,7 @@ import {
 } from 'next-share';
 
 export const Tree = ({ category }) => {
-  const [phase, setPhase] = useState("stabilization");
+  const [phase, setPhase] = useState('stabilization');
   const [selectedExercise, setSelectedExercise] = useState(null);
   const [exercises, setExercises] = useState([]);
   const currentPhaseExercises = exercises.filter((exercise) => {
@@ -25,14 +25,14 @@ export const Tree = ({ category }) => {
 
   const subset = useMemo(
     () => getRandomSubset(currentPhaseExercises, 3),
-    [category, currentPhaseExercises.length]
+    [category, currentPhaseExercises.length],
   );
   console.log(subset, currentPhaseExercises);
 
   useEffect(() => {
     if (category === 1) {
       const fetchExercises = async () => {
-        const response = await fetch("/api/friends");
+        const response = await fetch('/api/friends');
         const json = await response.json();
         setExercises(json);
       };
@@ -42,12 +42,12 @@ export const Tree = ({ category }) => {
   }, [category]);
 
   const handleFinishExercise = () => {
-    if (phase === "stabilization") {
-      setPhase("selfperception");
-    } else if (phase === "selfperception") {
-      setPhase("problemsolving");
-    } else if (phase === "problemsolving") {
-      setPhase("userHasFinished");
+    if (phase === 'stabilization') {
+      setPhase('selfperception');
+    } else if (phase === 'selfperception') {
+      setPhase('problemsolving');
+    } else if (phase === 'problemsolving') {
+      setPhase('userHasFinished');
     }
     setSelectedExercise(null);
   };
@@ -66,7 +66,7 @@ export const Tree = ({ category }) => {
 
   return (
     <div className={styles.mainContainer}>
-      {phase === "userHasFinished" ? (
+      {phase === 'userHasFinished' ? (
         <>
           <div>
             <p>
@@ -74,17 +74,17 @@ export const Tree = ({ category }) => {
               ji rád/a doporučil někomu jinému, můžeš nás sdílet.
             </p>
             <FacebookShareButton
-              url={'https://github.com/MartinaKolarova/MindSprout'}
+              url={'https://mind-sprout.vercel.app/'}
               quote={
                 'MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví'
               }
-              hashtag={'#nextshare'}
+              hashtag={'#mindsprout'}
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
 
             <FacebookMessengerShareButton
-              url={'https://github.com/MartinaKolarova/MindSprout'}
+              url={'https://mind-sprout.vercel.app/'}
               appId={''}
             >
               <FacebookMessengerIcon size={32} round />
