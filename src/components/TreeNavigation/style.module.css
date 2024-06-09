@@ -1,4 +1,4 @@
-.navContainer{
+.navContainer {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -8,43 +8,44 @@
 
 }
 
-.textContainer{
+.textContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    background-color: rgb(203, 220, 220);
-    border: 5px solid rgb(203, 220, 220);  
+    background-color: rgba(193, 255, 255, 0.201);
+    border: 5px solid rgba(193, 255, 255, 0.201);
     box-shadow: inset 0 0 0 2px black;
-    border-radius: 10px; 
+    border-radius: 30px;
     margin: 10px;
     width: 90vw;
     height: 40vh;
     padding: 3%;
 }
 
-.introduction{
-font-weight: bolder;
+.introduction {
+    font-weight: bolder;
 }
 
-.arrow{
+.arrow {
     position: absolute;
-    bottom: -1;    
+    bottom: -1;
     right: 10vw;
 
     width: 90px;
     height: 150px;
-    background-image: url(./rucnisipky.png) ;
+    background-image: url(./rucnisipky.png);
     background-size: cover;
 }
-.buttonsContainer{
+
+.buttonsContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.navButton{
+.navButton {
     background-image: url(./button.png);
     background-position: center;
     background-size: contain;

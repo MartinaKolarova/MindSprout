@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import styles from "./style.module.css";
-import Link from "next/link";
+import React, { useState } from 'react';
+import styles from './style.module.css';
+import Link from 'next/link';
 
 export const TreeNavigation = ({ onClick }) => {
   return (
     <div className={styles.navContainer}>
+      <p className={styles.introduction}>
+        Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy tak,
+        aby tě příště nerozhodily.
+      </p>
       <div className={styles.textContainer}>
-        <p className={styles.introduction}>
-          Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy
-          tak, aby tě příště nerozhodily.
-        </p>
         <br></br> <br></br>
         <p className={styles.guidance}>
           Vyber si oblast, která tě trápí a projdi si jednoduché kroky, díky

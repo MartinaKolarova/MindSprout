@@ -7,6 +7,7 @@
 
 .contact {
   background-image: linear-gradient(to bottom right, #F0F2FF, #F6EEFA);
+  border-radius: 20px;
   text-align: center;
   padding: 1rem;
   width: 70vw;
@@ -14,16 +15,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border: 10px solid #F0F2FF;
-  box-shadow: inset 0 0 0 2px black; */
-  border-radius: 20px;
 }
 
 .contactButton {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.4rem;
-  background-color: #9000d3;
+  background-color: #7f0b91;
   border-radius: 20px;
   color: white;
   width: 120px;
