@@ -1,15 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { Header } from "@/components/Header/Header";
-import { Contact } from "@/components/Contact/Contact";
-import { Footer } from "@/components/Footer/Footer";
-import { Tree } from "@/components/Tree/Tree";
-import { TreeNavigation } from "@/components/TreeNavigation/TreeNavigation";
-import { useState, useRef } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '@/styles/Home.module.css';
+import { Header } from '@/components/Header/Header';
+import { Contact } from '@/components/Contact/Contact';
+import { Footer } from '@/components/Footer/Footer';
+import { Tree } from '@/components/Tree/Tree';
+import { TreeNavigation } from '@/components/TreeNavigation/TreeNavigation';
+import { useState, useRef } from 'react';
 
 export default function Home() {
   const [chosenCategory, setChosenCategory] = useState(null);
@@ -23,7 +20,7 @@ export default function Home() {
 
   const scrollToTree = () => {
     if (treeRef.current) {
-      treeRef.current.scrollIntoView({ behavior: "smooth" });
+      treeRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -36,7 +33,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
+      <main className={styles.main}>
         <TreeNavigation onClick={handleClick} />
       </main>
       <div ref={treeRef}>
