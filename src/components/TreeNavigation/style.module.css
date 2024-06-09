@@ -5,23 +5,34 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(#f0f3fe, #ffffff);
 
 }
 
 .textContainer{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     background-color: rgb(203, 220, 220);
     border: 5px solid rgb(203, 220, 220);  
     box-shadow: inset 0 0 0 2px black;
     border-radius: 10px; 
     margin: 10px;
     width: 90vw;
-    height: 30vh;
+    height: 40vh;
     padding: 3%;
 }
 
+.introduction{
+font-weight: bolder;
+}
+
 .arrow{
+    position: absolute;
+    top: 45vh;
+    right: 10vw;
+
     width: 90px;
     height: 150px;
     background-image: url(./rucnisipky.png) ;
