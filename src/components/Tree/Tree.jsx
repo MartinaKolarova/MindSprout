@@ -1,10 +1,10 @@
-import { Bubble } from './Bubble/Bubble';
-import { Dialog } from './Dialog/Dialog';
-import styles from './Tree.module.css';
-import { useState, useEffect } from 'react';
+import { Bubble } from "./Bubble/Bubble";
+import { Dialog } from "./Dialog/Dialog";
+import styles from "./Tree.module.css";
+import { useState, useEffect, useMemo } from "react";
 
 export const Tree = ({ category }) => {
-  const [phase, setPhase] = useState('stabilization');
+  const [phase, setPhase] = useState("stabilization");
   const [selectedExercise, setSelectedExercise] = useState(null);
   const [exercises, setExercises] = useState([]);
 
@@ -17,12 +17,16 @@ export const Tree = ({ category }) => {
     return shuffled.slice(0, size);
   };
 
-  const subset = getRandomSubset(currentPhaseExercises, 3);
+  const subset = useMemo(
+    () => getRandomSubset(currentPhaseExercises, 3),
+    [category, currentPhaseExercises.length]
+  );
+  console.log(subset, currentPhaseExercises);
 
   useEffect(() => {
     if (category === 1) {
       const fetchExercises = async () => {
-        const response = await fetch('/api/friends');
+        const response = await fetch("/api/friends");
         const json = await response.json();
         setExercises(json);
       };
@@ -32,12 +36,12 @@ export const Tree = ({ category }) => {
   }, [category]);
 
   const handleFinishExercise = () => {
-    if (phase === 'stabilization') {
-      setPhase('selfperception');
-    } else if (phase === 'selfperception') {
-      setPhase('problemsolving');
-    } else if (phase === 'problemsolving') {
-      setPhase('userHasFinished');
+    if (phase === "stabilization") {
+      setPhase("selfperception");
+    } else if (phase === "selfperception") {
+      setPhase("problemsolving");
+    } else if (phase === "problemsolving") {
+      setPhase("userHasFinished");
     }
     setSelectedExercise(null);
   };
@@ -56,7 +60,7 @@ export const Tree = ({ category }) => {
 
   return (
     <div className={styles.mainContainer}>
-      {phase === 'userHasFinished' ? (
+      {phase === "userHasFinished" ? (
         <>
           <div>
             <p>Ahoj</p>
@@ -75,6 +79,7 @@ export const Tree = ({ category }) => {
               <Bubble
                 setSelectedExercise={setSelectedExercise}
                 exercise={exercise}
+                exerciseContent={exercise.content.text}
                 key={exercise.id}
               />
             ))}
