@@ -41,7 +41,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {chosenCategory !== null && <button onClick={handleBack}>zpět</button>}
+        {chosenCategory !== null && (
+          <button className={styles.backButton} onClick={handleBack}>
+            zpět
+          </button>
+        )}
         {chosenCategory === null && <TreeNavigation onClick={handleClick} />}
       </main>
       <div ref={treeRef}>

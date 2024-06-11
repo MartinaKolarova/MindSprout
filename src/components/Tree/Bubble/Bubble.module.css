@@ -1,1 +1,32 @@
 
+.bubble{
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-wrap: nowrap;
+  width: 27.19vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+ font-size: 10px;
+ text-align: center
+;}
+
+.bubble:nth-child(1) {
+  position: absolute;
+  left: 6%;
+  top: 6vh;
+}
+
+.bubble:nth-child(2) {
+  position: absolute;
+  left: 6%;
+  top: 62vh;
+}
+
+.bubble:nth-child(3) {
+  position: absolute;
+  right: 6%;
+  top: 40vh;
+}

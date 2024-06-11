@@ -227,3 +227,15 @@
     transform: rotate(0deg);
   }
 }
+.backButton {
+  display: flex; 
+  align-self: flex-start;
+  background-color: transparent; /* Transparentní pozadí */
+  border: none; /* Žádné ohraničení */
+  color: #000; /* Černý text */
+  padding: 10px 20px; /* Vnitřní odsazení */
+  font-size: 16px; /* Velikost textu */
+  cursor: pointer; /* Ukazatel myši */
+  border-radius: 5px; /* Zakulacené rohy */
+  transition: background-color 0.3s, color 0.3s; /* Přechod pro změny barev */
+}

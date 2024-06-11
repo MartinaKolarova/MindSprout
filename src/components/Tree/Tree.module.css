@@ -1,6 +1,30 @@
 .mainContainer {
-    height: 1000px;
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
 
+}
+
+.endbox{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 200px;
+}
+
+.sharebox {
+    flex-direction: column;
+    justify-content: center;
+    gap:60px;
+    text-align: center;
+}
+
+.contactbox{
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    text-align: center;
 }
 
 .buttonContact {
@@ -17,4 +41,23 @@
 .treeImg{
     height: 50vh;
     width: auto;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bubbles{
+    height: 1OOvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media (min-width: 1024px)
+{
+    
+
 }

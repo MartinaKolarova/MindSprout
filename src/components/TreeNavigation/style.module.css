@@ -3,7 +3,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
 }
@@ -36,4 +36,23 @@
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Nastavení stínu */
     width: 70vw;
     height: 10vh;
+}
+
+@media (min-width: 1024px)
+{
+    .buttonsContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navButton {
+        width: 25vw;
+    
+
+    }
+
 }

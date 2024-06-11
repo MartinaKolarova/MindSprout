@@ -91,8 +91,8 @@ export const Tree = ({ category }) => {
         priority
       />
       {phase === "userHasFinished" ? (
-        <>
-          <div>
+        <div className={styles.endbox}>
+          <div className={styles.sharebox}>
             <p>
               Máme radost pokud ti naše stránka pomohla cítit se lépe. Pokud bys
               ji rád/a doporučil někomu jinému, můžeš nás sdílet.
@@ -114,16 +114,20 @@ export const Tree = ({ category }) => {
               <FacebookMessengerIcon size={32} round />
             </FacebookMessengerShareButton>
           </div>
-          <div>
-            <p>
-              Pokud se stále cítíš mizerně a tvůj problém je větší než naše
-              stránka dokáže obsáhnout. Můžeš využít sekci kontakty
-            </p>
-            <Link href="/kontakty" className={styles.buttonContact}>
-              Kontakty
-            </Link>
+          <div className={styles.contactbox}>
+            <div>
+              <p>
+                Pokud se stále cítíš mizerně a tvůj problém je větší než naše
+                stránka dokáže obsáhnout. Můžeš využít sekci kontakty
+              </p>
+            </div>
+            <div>
+              <Link href="/kontakty" className={styles.buttonContact}>
+                Kontakty
+              </Link>
+            </div>
           </div>
-        </>
+        </div>
       ) : (
         <>
           <div className={styles.tree}></div>
