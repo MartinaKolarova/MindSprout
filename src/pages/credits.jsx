@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div>
-          <h3>Děkujeme těmto authorům za poskytnutí jejich děl:</h3>
+          <h3>Děkujeme těmto autorům za poskytnutí jejich děl:</h3>
         </div>
         <div>
           <p>
