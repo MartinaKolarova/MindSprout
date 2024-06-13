@@ -29,7 +29,7 @@ export default function Home() {
   // };
 
   return (
-    <>
+    <div className={styles.appcontainer}>
       <Header></Header>
       <Head>
         <title>Mind Sprout</title>
@@ -52,6 +52,6 @@ export default function Home() {
         <Tree category={chosenCategory} />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
