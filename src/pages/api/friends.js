@@ -12,11 +12,11 @@ export default function handler(req, res) {
       formOfRelaxation: 'Psaný text',
       content: {
         text: [
-          'Dotkni se svých rtů a mírně otevři ústa.',
+          'Lehce se dotkni rtů a trochu pootevři pusu.',
           'Nadechni se nosem a počítej do tří.',
-          'Při výdechu počítej do šesti a toto opakuj třikrát.',
-          'Nyní měj výdech stejně dlouhý jako nádech (např. nádech na 4 a výdech na 4) a pokračuj po dobu jedné minuty.',
-          'Polož si ruku na vrchní část břicha a snaž se jí s každým nádechem nadzvednout.',
+          'Vydechuj a počítej do šesti, zopakuj třikrát.',
+          'Teď měj výdech stejně dlouhý jako nádech (třeba nádech na čtyři a výdech na čtyři) a pokračuj tak jednu minutu.',
+          'Polož si ruku na břicho a snaž se ho s každým nádechem zvednout.',
         ],
         audio: '',
       },
@@ -32,7 +32,7 @@ export default function handler(req, res) {
       content: {
         text: [
           'Zatni jednu svou ruku v pěst co nejpevněji.',
-          'Až bude napětí co nejsilnější, uvolni.',
+          'Až bude stisk co nejsilnější, uvolni ho.',
           'Nadechni se a vydechni.',
           'To samé zopakuj s druhou rukou.',
           'Nadechni se a vydechni.',
@@ -52,7 +52,7 @@ export default function handler(req, res) {
       formOfRelaxation: 'Psaný text',
       content: {
         text: [
-          'Nyní si vyzkpušíš si sednout minimálně 10x pomaleji než obvykle',
+          'Nyní si vyzkoušíš sednout minimálně 10x pomaleji než obvykle',
           'Pokud právě sedíš, stoupni si',
           'Pokud stojíš, najdi si místo, kde si můžeš pohodlně a stabilně sednout, ideálně si opřít záda i ruce',
           'Dojdi k takovému místu na sezení, ale ještě si nesedej',
@@ -105,11 +105,11 @@ export default function handler(req, res) {
       formOfRelaxation: 'Psaný text',
       content: {
         text: [
-          'Zkus si vytvořit vlastního superhrdinu, který by zvládl Tvé problémy vyřešit levou zadní.',
-          'Můžeš o něm psát, nebo můžeš kreslit.',
-          'Zkus mu dát jméno, vymyslet, zda to bude člověk, zvíře, duch, či tvor z jiné planety.',
-          'Píšeš-li, zkus popsat, jaké vlastnosti a superschopnosti by pro řešení Tvého problému měl mít.',
-          'U obrázku znázorni části těla, zbraně, či jiné nástroje, které by mu k řešení problému pomohly.',
+        'Zkus si vymyslet vlastního superhrdinu, který by tvoje problémy vyřešil levou zadní.',
+        'Můžeš o něm psát, nebo ho kreslit.',
+        'Dej mu jméno, vymysli, jestli to bude člověk, zvíře, duch, nebo tvor z jiné planety.',
+        'Jestli píšeš, popiš, jaké vlastnosti a superschopnosti by měl mít, aby tvůj problém vyřešil.',
+        'Pokud kreslíš, zobraz části těla, zbraně nebo jiné nástroje, které by mu pomohly problém vyřešit.',
         ],
         audio: '',
       },
