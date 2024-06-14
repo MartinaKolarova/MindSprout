@@ -12,6 +12,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-color: rgb(220, 217, 213);
+  min-height: 100vh;
 }
 
 .backgroundOverlay {
@@ -20,6 +21,9 @@
   position: absolute;
   opacity: 0.8;
   background: #dcd9d5;
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
 .description {
