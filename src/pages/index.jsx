@@ -1,12 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
-import { Header } from "@/components/Header/Header";
-import { Contact } from "@/components/Contact/Contact";
-import { Footer } from "@/components/Footer/Footer";
-import { Tree } from "@/components/Tree/Tree";
-import { TreeNavigation } from "@/components/TreeNavigation/TreeNavigation";
-import { useState, useRef } from "react";
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '@/styles/Home.module.css';
+import { Header } from '@/components/Header/Header';
+import { Contact } from '@/components/Contact/Contact';
+import { Footer } from '@/components/Footer/Footer';
+import { Tree } from '@/components/Tree/Tree';
+import { TreeNavigation } from '@/components/TreeNavigation/TreeNavigation';
+import { useState, useRef } from 'react';
 
 export default function Home() {
   const [chosenCategory, setChosenCategory] = useState(null);
@@ -30,6 +30,7 @@ export default function Home() {
 
   return (
     <div className={styles.appcontainer}>
+      {chosenCategory && <div className={styles.backgroundOverlay}></div>}
       <Header></Header>
       <Head>
         <title>Mind Sprout</title>
@@ -40,6 +41,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={styles.main}>
         {chosenCategory !== null && (
           <button className={styles.backButton} onClick={handleBack}>
