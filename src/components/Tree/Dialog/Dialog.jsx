@@ -1,26 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Modal from "react-modal";
-import { useState } from "react";
-import styles from "./Dialog.module.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+import { useState } from 'react';
+import styles from './Dialog.module.css';
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    height: "90vh",
-    width: "90vw",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    height: '90vh',
+    width: '90vw',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 };
 
-Modal.setAppElement("#__next");
+Modal.setAppElement('#__next');
 export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -33,7 +33,7 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   };
 
   return (
-    <div>
+    <div className={styles.mainDialog}>
       <Modal
         isOpen={!!exercise}
         style={customStyles}
@@ -55,7 +55,7 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
             {exercise?.content.text[currentIndex]}
           </div>
           <div className={styles.bottomBar}>
-            {currentIndex > 0 && exercise?.content.text !== "" ? (
+            {currentIndex > 0 && exercise?.content.text !== '' ? (
               <button className={styles.leftArrow} onClick={handleLeft}>
                 left
               </button>
@@ -64,7 +64,7 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
               Relaxace ukončena
             </button>
             {currentIndex < exercise?.content.text.length - 1 &&
-            exercise?.content.text !== "" ? (
+            exercise?.content.text !== '' ? (
               <button className={styles.rightArrow} onClick={handleRight}>
                 right
               </button>

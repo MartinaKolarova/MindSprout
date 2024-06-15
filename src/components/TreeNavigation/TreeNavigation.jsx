@@ -1,21 +1,20 @@
-import React, { useState } from "react";
-import styles from "./style.module.css";
-import Link from "next/link";
+import styles from './style.module.css';
+import Link from 'next/link';
+import ReactCurvedText from 'react-curved-text';
 
 export const TreeNavigation = ({ onClick }) => {
   return (
     <div className={styles.navContainer}>
       <div className={styles.textContainer}>
-        <p className={styles.introduction}>
-          Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy
-          tak, aby tě příště nerozhodily.
-        </p>
-        <p>🍃</p>
+      <p className={styles.introduction}>
+      Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy
+      tak, aby tě příště nerozhodily
+      </p>
 
         <p className={styles.guidance}>
-          Vyber si oblast, která tě trápí a projdi si jednoduché kroky, díky
+          Vyber si oblast, která tě trápí a projdi si tři jednoduché kroky, díky
           kterým se nebudeš cítit líp jenom ty, ale i náš strom, který nutně
-          potřebuje pomoc
+          potřebuje pomoc.
         </p>
         <div className={styles.arrow}></div>
       </div>

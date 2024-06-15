@@ -23,6 +23,7 @@
   background: #dcd9d5;
   top: 0;
   left: 0;
+  z-index: 1;
   position: fixed;
 }
 
@@ -254,6 +255,8 @@
   /* Zakulacené rohy */
   transition: background-color 0.3s, color 0.3s;
   /* Přechod pro změny barev */
+  z-index: 2;
+  position: relative;
 }
 
 @media (min-aspect-ratio: 11/6) {

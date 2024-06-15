@@ -1,4 +1,4 @@
-.bottomBar{
+.bottomBar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,7 +11,12 @@
     right: 5px;
 }
 
-.dialogcontainer{
+.mainDialog {
+    z-index: 3;
+    position: relative;
+}
+
+.dialogcontainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

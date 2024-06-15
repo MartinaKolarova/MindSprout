@@ -30,7 +30,6 @@ export default function Home() {
 
   return (
     <div className={styles.appcontainer}>
-      {chosenCategory && <div className={styles.backgroundOverlay}></div>}
       <Header></Header>
       <Head>
         <title>Mind Sprout</title>
@@ -41,7 +40,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      {chosenCategory && <div className={styles.backgroundOverlay}></div>}
       <main className={styles.main}>
         {chosenCategory !== null && (
           <button className={styles.backButton} onClick={handleBack}>

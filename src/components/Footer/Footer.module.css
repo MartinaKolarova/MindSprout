@@ -3,6 +3,8 @@
   padding: 20px;
   text-align: center;
   font-size: 14px;
+  z-index: 2;
+  position: relative;
 }
 
 .footer a {
