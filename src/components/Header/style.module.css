@@ -44,12 +44,13 @@
   left: -100%;
   top: 60px;
   flex-direction: column;
-  background-color: white;
+  background-color: transparent;
   width: 100%;
   text-align: center;
   transition: left 0.3s;
   gap: 10px;
   list-style: none;
+  color: white;
 }
 
 .navMenu.active {
