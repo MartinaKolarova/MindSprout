@@ -1,18 +1,18 @@
-import { Bubble } from "./Bubble/Bubble";
-import { Dialog } from "./Dialog/Dialog";
-import styles from "./Tree.module.css";
-import { useState, useEffect, useMemo } from "react";
-import Link from "next/link";
+import { Bubble } from './Bubble/Bubble';
+import { Dialog } from './Dialog/Dialog';
+import styles from './Tree.module.css';
+import { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
 import {
   FacebookMessengerShareButton,
   FacebookMessengerIcon,
   FacebookShareButton,
   FacebookIcon,
-} from "next-share";
-import Image from "next/image";
+} from 'next-share';
+import Image from 'next/image';
 
 export const Tree = ({ category }) => {
-  const [phase, setPhase] = useState("stabilization");
+  const [phase, setPhase] = useState('stabilization');
   const [selectedExercise, setSelectedExercise] = useState(null);
   const [exercises, setExercises] = useState([]);
   const currentPhaseExercises = exercises.filter((exercise) => {
@@ -21,7 +21,7 @@ export const Tree = ({ category }) => {
 
   useEffect(() => {
     if (category === null) {
-      setPhase("stabilization");
+      setPhase('stabilization');
     }
   }, [category]);
 
@@ -32,18 +32,18 @@ export const Tree = ({ category }) => {
 
   const subset = useMemo(
     () => getRandomSubset(currentPhaseExercises, 3),
-    [category, currentPhaseExercises.length]
+    [category, currentPhaseExercises.length],
   );
 
   const determineTree = (phase) => {
-    if (phase === "stabilization") {
-      return "tree1.png";
-    } else if (phase === "selfperception") {
-      return "tree2.png";
-    } else if (phase === "problemsolving") {
-      return "tree3.png";
-    } else if (phase === "userHasFinished") {
-      return "tree4.png";
+    if (phase === 'stabilization') {
+      return 'tree1.png';
+    } else if (phase === 'selfperception') {
+      return 'tree2.png';
+    } else if (phase === 'problemsolving') {
+      return 'tree3.png';
+    } else if (phase === 'userHasFinished') {
+      return 'tree4.png';
     } else {
       return null;
     }
@@ -54,7 +54,7 @@ export const Tree = ({ category }) => {
   useEffect(() => {
     if (category === 1) {
       const fetchExercises = async () => {
-        const response = await fetch("/api/friends");
+        const response = await fetch('/api/friends');
         const json = await response.json();
         setExercises(json);
       };
@@ -64,12 +64,12 @@ export const Tree = ({ category }) => {
   }, [category]);
 
   const handleFinishExercise = () => {
-    if (phase === "stabilization") {
-      setPhase("selfperception");
-    } else if (phase === "selfperception") {
-      setPhase("problemsolving");
-    } else if (phase === "problemsolving") {
-      setPhase("userHasFinished");
+    if (phase === 'stabilization') {
+      setPhase('selfperception');
+    } else if (phase === 'selfperception') {
+      setPhase('problemsolving');
+    } else if (phase === 'problemsolving') {
+      setPhase('userHasFinished');
     }
     setSelectedExercise(null);
   };
@@ -78,7 +78,9 @@ export const Tree = ({ category }) => {
     return null;
   } else if (category !== 1) {
     return (
-      <p className={styles.apology}>Omlouváme se, na obsahu se dále pracuje.</p>
+      <div className={styles.apology}>
+        <p>Omlouváme se, na obsahu se ještě pracuje.</p>
+      </div>
     );
   }
 
@@ -89,16 +91,16 @@ export const Tree = ({ category }) => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.treeImageCard}>
-      <Image
-        src={`/${currentTreeUrl}`}
-        alt="Rostoucí strom"
-        className={styles.treeImg}
-        width={70}
-        height={50}
-        priority
-      />
+        <Image
+          src={`/${currentTreeUrl}`}
+          alt="Rostoucí strom"
+          className={styles.treeImg}
+          width={70}
+          height={50}
+          priority
+        />
       </div>
-      {phase === "userHasFinished" ? (
+      {phase === 'userHasFinished' ? (
         <div className={styles.endbox}>
           <div className={styles.sharebox}>
             <p>
@@ -106,18 +108,18 @@ export const Tree = ({ category }) => {
               ji rád/a doporučil někomu jinému, můžeš nás sdílet.
             </p>
             <FacebookShareButton
-              url={"https://mind-sprout.vercel.app/"}
+              url={'https://mind-sprout.vercel.app/'}
               quote={
-                "MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví"
+                'MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví'
               }
-              hashtag={"#mindsprout"}
+              hashtag={'#mindsprout'}
             >
               <FacebookIcon size={40} round />
             </FacebookShareButton>
 
             <FacebookMessengerShareButton
-              url={"https://mind-sprout.vercel.app/"}
-              appId={""}
+              url={'https://mind-sprout.vercel.app/'}
+              appId={''}
             >
               <FacebookMessengerIcon size={40} round />
             </FacebookMessengerShareButton>
