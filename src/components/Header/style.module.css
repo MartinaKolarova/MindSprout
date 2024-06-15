@@ -3,6 +3,7 @@
   width: 100%;
   z-index: 2;
   position: relative;
+  padding: 2%;
 }
 
 .container {
@@ -17,14 +18,16 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start ;
 }
 
 .logo {
   width: 50%;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 8px;
+  flex-direction: row-reverse;
 }
 
 /* .logoTitle {
@@ -36,7 +39,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .navMenu {
@@ -108,8 +111,8 @@
   }
 
   .imgLogo {
-    width: 100px;
-    height: 70px;
+    width: auto;
+    height: 70%;
   }
 
   .navMenu {
@@ -120,6 +123,9 @@
     gap: 20px;
     text-align: left;
     background-color: transparent;
+    color: whitesmoke;
+    font-size: larger;
+    font-weight: bold;
   }
 
   .navItem {

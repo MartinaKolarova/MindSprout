@@ -32,8 +32,8 @@ export const Header = () => {
               src="/logo.png"
               alt="Logo"
               className={styles.imgLogo}
-              width={70}
-              height={50}
+              width={50}
+              height={37}
               priority
             />
             <p
@@ -49,7 +49,11 @@ export const Header = () => {
               }`}
             >
               <li className={styles.navItem}>
-                <Link href="/" className={styles.navLink} onClick={closeMenu}>
+                <Link
+                  href="/index.jsx"
+                  className={styles.navLink}
+                  onClick={closeMenu}
+                >
                   Domů
                 </Link>
               </li>
