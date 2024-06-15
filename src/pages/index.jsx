@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <div className={styles.appcontainer}>
-      <Header></Header>
+      <Header handleHome={handleBack}></Header>
       <Head>
         <title>Mind Sprout</title>
         <meta
