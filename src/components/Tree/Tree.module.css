@@ -8,23 +8,31 @@
 
 .endbox {
     display: flex;
-    justify-content: space-between;
+    flex: 1;
+    justify-content: center;
     align-items: center;
-    gap: 200px;
+    font-size: 10px;
+    gap: 55vw;
 }
 
 .sharebox {
     flex-direction: column;
     justify-content: center;
-    gap: 60px;
     text-align: center;
+}
+
+.sharebox p {
+    width: 20vw;
 }
 
 .contactbox {
     flex-direction: column;
     justify-content: center;
-    gap: 60px;
     text-align: center;
+}
+
+.contactbox p {
+    width: 20vw;
 }
 
 .buttonContact {
@@ -35,7 +43,7 @@
     background-color: #8d868e;
     border-radius: 20px;
     color: white;
-    width: 120px;
+    width: 80px;
 }
 
 .treeImageCard {
@@ -68,4 +76,50 @@
 
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 768px) {
+    .endbox {
+        font-size: 20px;
+    }
+
+    .buttonContact {
+        width: 15vw;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .endbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        gap: 25vw;
+    }
+
+    .sharebox {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sharebox p {
+        width: 30vw;
+        padding: 10px;
+    }
+
+    .contactbox {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contactbox p {
+        width: 30vw;
+        padding: 10px;
+    }
+
+    .buttonContact {
+        width: 15vw;
+    }
+}
