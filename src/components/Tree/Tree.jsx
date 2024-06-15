@@ -37,13 +37,13 @@ export const Tree = ({ category }) => {
 
   const determineTree = (phase) => {
     if (phase === "stabilization") {
-      return "layer1.png";
+      return "tree1.png";
     } else if (phase === "selfperception") {
-      return "layer2.png";
+      return "tree2.png";
     } else if (phase === "problemsolving") {
-      return "layer3.png";
+      return "tree3.png";
     } else if (phase === "userHasFinished") {
-      return "layer4.png";
+      return "tree4.png";
     } else {
       return null;
     }

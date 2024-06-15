@@ -4,7 +4,6 @@ import Modal from "react-modal";
 import { useState } from "react";
 import styles from "./Dialog.module.css";
 import classNames from "classnames";
-import { crossbuttononclick } from "./dialog.js";
 
 const customStyles = {
   content: {
