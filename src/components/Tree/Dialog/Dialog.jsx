@@ -1,26 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
-import { useState } from 'react';
-import styles from './Dialog.module.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import Modal from "react-modal";
+import { useState } from "react";
+import styles from "./Dialog.module.css";
+import classNames from "classnames";
+import { crossbuttononclick } from "./dialog.js";
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    height: '90vh',
-    width: '90vw',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    height: "90vh",
+    width: "90vw",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 };
 
-Modal.setAppElement('#__next');
+Modal.setAppElement("#__next");
 export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -33,40 +35,47 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   };
 
   return (
-    <div className={styles.mainDialog}>
+    <div>
       <Modal
         isOpen={!!exercise}
         style={customStyles}
         contentLabel="Example Modal"
+        className={classNames(styles.modalContent, styles.grit)}
       >
         <div className={styles.dialogcontainer}>
           {exercise?.content.audio ? (
             <audio controls>
               <source src={exercise.content.audio} type="audio/mpeg" />
-              Your browser does not support the audio element.
+              Váš prohlížeč nepodporuje tento audio soubor{" "}
             </audio>
           ) : (
-            <div className={styles.exercisetitle}>{exercise?.keyWords}</div>
+            <h2 className={styles.exercisetitle}>{exercise?.keyWords}</h2>
           )}
-          <button className={styles.crossbutton} onClick={closeExercise}>
-            X
+          <button
+            className={classNames(styles.crossbutton)}
+            onClick={closeExercise}
+          >
+            <span></span>
+            <span></span>
           </button>
           <div className={styles.textContent}>
             {exercise?.content.text[currentIndex]}
           </div>
           <div className={styles.bottomBar}>
-            {currentIndex > 0 && exercise?.content.text !== '' ? (
+            {currentIndex > 0 && exercise?.content.text !== "" ? (
               <button className={styles.leftArrow} onClick={handleLeft}>
-                left
+                <span></span>
+                <span></span>
               </button>
             ) : null}
             <button className={styles.finishbutton} onClick={finishExercise}>
-              Relaxace ukončena
+              Mám hotovo
             </button>
             {currentIndex < exercise?.content.text.length - 1 &&
-            exercise?.content.text !== '' ? (
+            exercise?.content.text !== "" ? (
               <button className={styles.rightArrow} onClick={handleRight}>
-                right
+                <span></span>
+                <span></span>
               </button>
             ) : null}
           </div>
