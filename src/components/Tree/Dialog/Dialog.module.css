@@ -6,7 +6,7 @@
 .bottomBar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 
 }
@@ -31,7 +31,7 @@
   }
   
   .crossbutton span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
   }
   
   .crossbutton span:nth-child(2) {
@@ -58,6 +58,7 @@
 
 .textContent{
     font-weight: lighter;
+    text-align: center;
 }
 
 .rightArrow{
