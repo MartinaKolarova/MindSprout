@@ -8,11 +8,11 @@
 
 .endbox {
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
     font-size: 10px;
-    gap: 55vw;
+    gap: 54vw;
+    margin: 4px;
 }
 
 .sharebox {
@@ -43,7 +43,7 @@
     background-color: #8d868e;
     border-radius: 20px;
     color: white;
-    width: 80px;
+    width: 60px;
 }
 
 .treeImageCard {
@@ -79,6 +79,7 @@
 @media (min-width: 768px) {
     .endbox {
         font-size: 20px;
+        flex: 1;
     }
 
     .buttonContact {
@@ -86,10 +87,11 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 
     .endbox {
         display: flex;
+        flex: 1;
         flex-direction: row;
         justify-content: center;
         align-items: center;

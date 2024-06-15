@@ -112,14 +112,14 @@ export const Tree = ({ category }) => {
               }
               hashtag={"#mindsprout"}
             >
-              <FacebookIcon size={32} round />
+              <FacebookIcon size={40} round />
             </FacebookShareButton>
 
             <FacebookMessengerShareButton
               url={"https://mind-sprout.vercel.app/"}
               appId={""}
             >
-              <FacebookMessengerIcon size={32} round />
+              <FacebookMessengerIcon size={40} round />
             </FacebookMessengerShareButton>
           </div>
           <div className={styles.contactbox}>
