@@ -1,7 +1,9 @@
 import styles from './style.module.css';
 import Link from 'next/link';
 import ReactCurvedText from 'react-curved-text';
-
+import { Montserrat } from 'next/font/google'
+ 
+const inter = Montserrat({ subsets: ['latin'] })
 export const TreeNavigation = ({ onClick }) => {
   return (
     <div className={styles.navContainer}>
