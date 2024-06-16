@@ -79,7 +79,7 @@ export const Tree = ({ category }) => {
   } else if (category !== 1) {
     return (
       <div className={styles.apology}>
-        <p>Omlouváme se, na obsahu se ještě pracuje.</p>
+        <p>Omlouváme se, na obsahu se stále pracuje.</p>
       </div>
     );
   }

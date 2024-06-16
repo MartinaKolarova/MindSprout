@@ -5,7 +5,7 @@
 
 .textContainer {
     margin-top: -5vh;
-    max-width: 20vh;
+    max-width: 20vw;
     display: flex;
     flex-direction: column;
     padding: 3%;
