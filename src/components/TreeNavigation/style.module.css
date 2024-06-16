@@ -2,38 +2,54 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 6vh;
 }
 
 .textContainer {
-    margin-top: 150px;
+    margin-top: 105px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 3%;
+    gap: 5vh;
+    margin-left: 6%;
 }
 
 .smallTitle{
-    font-size: small;
+    color: #515878ff;
+    font-weight: 100;
+    font-size: 20px;
 }
 
 .bigTitle{
-    font-size: large;
+font-weight: 800;
+color: #515878ff;
+font-size: 25px;
 }
 
+.guidanceText{
+    font-weight: 250;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 400px;
+    
+}
 .buttonsContainer {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap:10px
 }
 
 .navButton {
+    width: 50%;
     border: transparent;
     background-color: #BFA790;
     width: 70vw;
-    height: 8vh;
+    height: 7vh;
     border-radius: 10px;
-    color: #fef4f2ff;
+    color: #e7ded0;
     transition: background-color 0.3s, color 0.3s;
     font-size: 15px;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
@@ -46,47 +62,52 @@
 }
 
 @media (min-width: 768px) {
+
+    .categoryContainer {
+       
+        gap: 10px;
+    }
+    .textContainer{
+     margin-top: 150px;
+    }
     .buttonsContainer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 30px;
-        width: 90vw;
-        font-size: 16px;
+     display: flex;
+     flex-direction: row;
+     justify-content:space-evenly;
+     align-items: center;
+     margin-left: 6%;
+     margin-right: 6%;
+     padding: 3%;
+
     }
 
     .navButton {
         font-size: 16px;
+        max-width: 30%;
+        height: 200;
     }
 
-    .guidance {
-        width: 65vw;
-        height: 15vh;
-        align-self: right;
-    }
 
-    .guidance p {
-        font-size: 16px;
-        padding: auto;
-        font-weight: bolder;
-    }
+    .smallTitle{
+        font-size: small;
+        color: #515878ff;
+        font-weight: 100;
+        font-size: 25px;
+        margin-left: 1%;
 
-    .introduction {
-        /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
-        font-size: 16px;
-        border-radius: 29% 71% 75% 25% / 61% 41% 59% 39%;
-        width: 30vh;
-        height: 15vh;
-        margin-left: -5vw;
-        margin-top: 20vh;
     }
+    
+    .bigTitle{
+    font-weight: 800;
+    color: #515878ff;
+    font-size: 25px;
+    margin-left: 1%;
 
-    .introduction p {
-        font-size: 16px;
-        padding: auto;
-        font-weight: bolder;
+    }
+    .guidanceText{
+        font-size: 17px;
+        margin-left: 1%;
+
     }
 }
 
@@ -98,91 +119,34 @@
         justify-content: space-evenly;
         align-items: center;
         gap: 30px;
+
     }
 
-    .guidance {
-        width: 75vh;
-        height: 30vh;
+    .textContainer{
+        margin-top: 200px;
+    }
+    .smallTitle{
+        color: #515878ff;
+        font-weight: 100;
+        font-size: 30px;
+    }
+    
+    .bigTitle{
+    font-weight: 800;
+    color: #515878ff;
+    font-size: 35px;
     }
 
-    .guidance p {
-        font-size: 18px;
-        padding: auto;
-        font-weight: bolder;
+    .guidanceText{
+        font-size: 19px;
+
     }
 
     .navButton {
-        width: 25vw;
-        font-size: 18px;
+        font-size: 22px;
         cursor: pointer;
+
     }
 
-    .introduction {
-        /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
-        font-size: 16px;
-        border-radius: 29% 71% 75% 25% / 61% 41% 59% 39%;
-        width: 50vh;
-        height: 30vh;
-        margin-top: 35vh;
-        margin-left: -12vh;
-    }
-
-    .introduction p {
-        font-size: 18px;
-        padding: auto;
-        font-weight: bolder;
-    }
+    
 }
-
-/* /<svg width={400} height={130}>
-<path id={styles.curve} d="M 20 120 C 0 20, 50 0, 160 120"></path>
-<text className={styles.text}>
-  <textPath href={`#${styles.curve}`} className={styles.textPath} startOffset="5%"> 
-  Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy
-  tak, aby tě příště nerozhodily.            </textPath>
-</text>
-</svg> 
-<ReactCurvedText className={styles.curvedTextFirst}
-          width={370}
-          height={300}
-          cx={65}
-          cy={140}
-          rx={80}
-          ry={100}
-          startOffset={50}
-          reversed={true}
-          text="Tahle appka ti pomůže cítit se líp a naučit se"
-          textProps={{ style: { fontSize: 10 } }}
-          textPathProps={null}
-          tspanProps={{"dy" : "16"}}
-          ellipseProps={null}
-          svgProps={null}
-        />
-        <ReactCurvedText
-        className={styles.curvedTextSecond}
-          width={370}
-          height={300}
-          cx={140}
-          cy={50}
-          rx={100}
-          ry={100}
-          startOffset={50}
-          reversed={false}
-          text="řešit svoje problémy
-        tak, aby tě příště nerozhodily"
-          textProps={{ style: { fontSize: 10 } }}
-          textPathProps={null}
-          tspanProps={null}
-          ellipseProps={null}
-          svgProps={null}
-        />
-        #curve {
-            fill: transparent;
-        }
-        
-        .text {
-        }
-        
-        .textPath {
-        }
-       */

@@ -1,9 +1,9 @@
-import styles from './style.module.css';
-import Link from 'next/link';
-import ReactCurvedText from 'react-curved-text';
-import { Montserrat } from 'next/font/google'
- 
-const inter = Montserrat({ subsets: ['latin'] })
+import styles from "./style.module.css";
+import Link from "next/link";
+import ReactCurvedText from "react-curved-text";
+import { Montserrat } from "next/font/google";
+
+const inter = Montserrat({ subsets: ["latin"] });
 export const TreeNavigation = ({ onClick }) => {
   return (
     <div className={styles.categoryContainer}>
@@ -18,7 +18,7 @@ export const TreeNavigation = ({ onClick }) => {
         <div className={styles.guidance}>
           <p className={styles.guidanceText}>
             Vyber si oblast, kterou řešíš a projdi si tři kroky, díky kterým se
-            nebudeš cítit líp jen ty, ale i strom, který nutně potřebuje pomoc.
+            budeš cítit líp ty i strom, který nutně potřebuje pomoc.
           </p>
         </div>
       </div>
