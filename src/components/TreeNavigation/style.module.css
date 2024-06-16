@@ -1,92 +1,23 @@
-.navContainer {
+.categoryContainer {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .textContainer {
-    margin-top: -5vh;
-    max-width: 20vw;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     padding: 3%;
-    gap: 5vh;
 }
 
-.introduction {
-    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
-    position: relative;
-    background-color: #5c524c;
-    /*#bfa790*/
-    color: #c5c3bf;
-    /*#625d52*/
-    border-radius: 29% 71% 75% 25% / 61% 41% 59% 39%;
-    width: 250px;
-    height: 170px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 25vh;
+.smallTitle{
+    font-size: small;
 }
 
-.introduction p {
-    font-size: 14px;
-    padding: 10px;
-    font-weight: bolder;
-}
-
-.guidance {
-    position: relative;
-    border-radius: 75% 25% 47% 53% / 53% 72% 28% 47%;
-    background-color: #5c524c;
-    color: #c5c3bf;
-    width: 250px;
-    height: 180px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.guidance p {
-    font-size: 14px;
-    padding: 15px;
-    font-weight: bolder;
-}
-
-.textFocusIn {
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-@-webkit-keyframes text-focus-in {
-    0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes text-focus-in {
-    0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
+.bigTitle{
+    font-size: large;
 }
 
 .buttonsContainer {
@@ -98,19 +29,19 @@
 
 .navButton {
     border: transparent;
-    background-color: #bfa790;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: #BFA790;
     width: 70vw;
     height: 8vh;
-    border-radius: 20px;
-    color: #e1dfda;
+    border-radius: 10px;
+    color: #fef4f2ff;
     transition: background-color 0.3s, color 0.3s;
     font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 .navButton:hover {
     background-color: #ccc3b2;
-    color: #5c524c;
+    color: #515878ff;
     ;
 }
 

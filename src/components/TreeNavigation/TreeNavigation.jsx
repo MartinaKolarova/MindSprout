@@ -1,19 +1,20 @@
-import styles from './style.module.css';
-import Link from 'next/link';
-import ReactCurvedText from 'react-curved-text';
+import styles from "./style.module.css";
+import Link from "next/link";
+import ReactCurvedText from "react-curved-text";
 
 export const TreeNavigation = ({ onClick }) => {
   return (
-    <div className={styles.navContainer}>
+    <div className={styles.categoryContainer}>
       <div className={styles.textContainer}>
         <div className={styles.introduction}>
-          <p className={styles.textFocusIn}>
-            Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy
-            tak, aby tě příště nerozhodily
+          <p className={styles.smallTitle}>POJĎ</p>
+          <p className={styles.bigTitle}>
+            POSÍLIT<br></br>
+            MYSL<br></br>A NAJÍT KLID<br></br>
           </p>
         </div>
         <div className={styles.guidance}>
-          <p className={styles.textFocusIn}>
+          <p className={styles.guidanceText}>
             Vyber si oblast, kterou řešíš a projdi si tři kroky, díky kterým se
             nebudeš cítit líp jen ty, ale i strom, který nutně potřebuje pomoc.
           </p>
