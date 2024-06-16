@@ -21,7 +21,7 @@ export const Header = ({ handleHome }) => {
   const closeMenu = () => {
     setIsHamburgerActive(false);
     setIsNavMenuActive(false);
-    handleHome();
+    if (handleHome) handleHome();
   };
 
   return (
