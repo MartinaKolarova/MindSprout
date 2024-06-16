@@ -6,7 +6,6 @@ export const TreeNavigation = ({ onClick }) => {
   return (
     <div className={styles.choiceContainer}>
       <div className={styles.textContainer}>
-<<<<<<< HEAD
         <p className={styles.introduction}>
           Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy
           tak, aby tě příště nerozhodily
@@ -17,20 +16,6 @@ export const TreeNavigation = ({ onClick }) => {
           Vyber si oblast, kterou řešíš a projdi si tři kroky, díky kterým se
           nebudeš cítit líp jen ty, ale i strom, který nutně potřebuje pomoc.
         </p>
-=======
-        <div className={styles.introduction}>
-          <p className={styles.textFocusIn}>
-            Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy
-            tak, aby tě příště nerozhodily
-          </p>
-        </div>
-        <div className={styles.guidance}>
-          <p className={styles.textFocusIn}>
-            Vyber si oblast, kterou řešíš a projdi si tři kroky, díky kterým se
-            nebudeš cítit líp jen ty, ale i strom, který nutně potřebuje pomoc.
-          </p>
-        </div>
->>>>>>> 55a159802f128e41ea6af221cb053ef594938cba
       </div>
       <div className={styles.buttonsContainer}>
         <button className={styles.navButton} onClick={() => onClick(1)}>

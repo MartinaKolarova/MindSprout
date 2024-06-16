@@ -90,7 +90,6 @@ export const Tree = ({ category }) => {
 
   return (
     <div className={styles.mainContainer}>
-<<<<<<< HEAD
       <Image
         src={`/${currentTreeUrl}`}
         alt="Rostoucí strom"
@@ -99,20 +98,7 @@ export const Tree = ({ category }) => {
         height={816}
         priority
       />
-      {phase === "userHasFinished" ? (
-=======
-      <div className={styles.treeImageCard}>
-        <Image
-          src={`/${currentTreeUrl}`}
-          alt="Rostoucí strom"
-          className={styles.treeImg}
-          width={70}
-          height={50}
-          priority
-        />
-      </div>
       {phase === 'userHasFinished' ? (
->>>>>>> 55a159802f128e41ea6af221cb053ef594938cba
         <div className={styles.endbox}>
           <div className={styles.sharebox}>
             <p>
