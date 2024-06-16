@@ -27,7 +27,7 @@ export const Header = ({ handleHome }) => {
   return (
     <header className={styles.header}>
       <div className={styles.subcontainer}>
-        <a href="/" className={styles.logoLink}>
+        <Link href="/" className={styles.logoLink} onClick={closeMenu}>
           <div className={styles.logo}>
             <div className={styles.logoImage}>
               <Image
@@ -46,7 +46,7 @@ export const Header = ({ handleHome }) => {
               Mind Sprout
             </p>
           </div>
-        </a>
+        </Link>
         <nav className={styles.navbar}>
           <ul
             className={`${styles.navMenu} ${

@@ -1,30 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
-import { useState } from 'react';
-import styles from './Dialog.module.css';
-import classNames from 'classnames';
-import { Montserrat } from 'next/font/google';
+import React from "react";
+import ReactDOM from "react-dom";
+import Modal from "react-modal";
+import { useState } from "react";
+import styles from "./Dialog.module.css";
+import classNames from "classnames";
+import { Montserrat } from "next/font/google";
 
-const montserrat = Montserrat({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    height: '90vh',
-    width: '90vw',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    height: "80vh",
+    width: "85vw",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 };
 
-Modal.setAppElement('#__next');
+Modal.setAppElement("#__next");
 export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -48,12 +48,17 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
           className={classNames(styles.dialogcontainer, montserrat.className)}
         >
           {exercise?.content.audio ? (
-            <audio controls>
-              <source src={exercise.content.audio} type="audio/mpeg" />
-              Váš prohlížeč nepodporuje tento audio soubor{' '}
-            </audio>
+            <div className={styles.audioCont}>
+              <h2 className={classNames(styles.exercisetitle)}>
+                {exercise?.keyWords}
+              </h2>
+              <audio controls className={styles.audioPlayer}>
+                <source src={exercise.content.audio} type="audio/mpeg" />
+                Váš prohlížeč nepodporuje tento audio soubor{" "}
+              </audio>
+            </div>
           ) : (
-            <h2 className={classNames(styles.exercisetitle, styles.roboto)}>
+            <h2 className={classNames(styles.exercisetitle)}>
               {exercise?.keyWords}
             </h2>
           )}
@@ -68,7 +73,7 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
             {exercise?.content.text[currentIndex]}
           </div>
           <div className={styles.bottomBar}>
-            {currentIndex > 0 && exercise?.content.text !== '' ? (
+            {currentIndex > 0 && exercise?.content.text !== "" ? (
               <button className={styles.leftArrow} onClick={handleLeft}>
                 <span></span>
                 <span></span>
@@ -81,7 +86,7 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
               Mám hotovo
             </button>
             {currentIndex < exercise?.content.text.length - 1 &&
-            exercise?.content.text !== '' ? (
+            exercise?.content.text !== "" ? (
               <button className={styles.rightArrow} onClick={handleRight}>
                 <span></span>
                 <span></span>

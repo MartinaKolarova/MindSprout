@@ -3,6 +3,23 @@
     mask-image: url("/public/grit.png");
   } */
 
+.audioPlayer{
+  max-width: 100%;
+  align-self: center;
+}
+.audioCont{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+width: 100%;
+height: 100%;
+}
+
+.exercisetitle{
+  font-weight: 600;
+}
+
 .bottomBar {
   display: flex;
   flex-direction: row;
@@ -25,7 +42,7 @@
 .crossbutton span {
   position: absolute;
   width: 100%;
-  height: 3px;
+  height: 5px;
   background-color: black;
   transition: all 0.3s ease;
 }
@@ -110,7 +127,7 @@
 }
 
 .finishbutton {
-  background: none;
+  background: rgba(215, 206, 188, 0.8);
   width: 30%;
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -118,4 +135,33 @@
   cursor: pointer;
   margin-bottom: 5vh;
   border-radius: 10px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .crossbutton {
+    top: 30px;
+    right: 40px;
+  }
+
+  .finishbutton{
+    width: 40%;
+    height: 5vh;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .audioPlayer{
+    width: 80%;
+    }
+
+    .exercisetitle{
+      font-weight: 600;
+      font-size: 35px;
+    }
+}
+
+@media (min-width: 1024px) {
+
 }
