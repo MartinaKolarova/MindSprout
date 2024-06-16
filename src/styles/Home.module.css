@@ -8,7 +8,7 @@
 }
 
 .appcontainer {
-  background-image: url(pozadi.png);
+  background-image: url(backgroundimage.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-color: rgb(220, 217, 213);
