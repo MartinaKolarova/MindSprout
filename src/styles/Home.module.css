@@ -13,6 +13,8 @@
   background-repeat: no-repeat;
   background-color: rgb(220, 217, 213);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .backgroundOverlay {
