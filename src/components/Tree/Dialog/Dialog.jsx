@@ -4,12 +4,9 @@ import Modal from 'react-modal';
 import { useState } from 'react';
 import styles from './Dialog.module.css';
 import classNames from 'classnames';
-import { Roboto } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-});
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 const customStyles = {
   content: {
@@ -40,14 +37,16 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   };
 
   return (
-    <div className={styles.roboto}>
+    <div>
       <Modal
         isOpen={!!exercise}
         style={customStyles}
         contentLabel="Example Modal"
         className={classNames(styles.modalContent, styles.grit)}
       >
-        <div className={classNames(styles.dialogcontainer, styles.roboto)}>
+        <div
+          className={classNames(styles.dialogcontainer, montserrat.className)}
+        >
           {exercise?.content.audio ? (
             <audio controls>
               <source src={exercise.content.audio} type="audio/mpeg" />
@@ -75,7 +74,10 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
                 <span></span>
               </button>
             ) : null}
-            <button className={styles.finishbutton} onClick={finishExercise}>
+            <button
+              className={classNames(styles.finishbutton, montserrat.className)}
+              onClick={finishExercise}
+            >
               Mám hotovo
             </button>
             {currentIndex < exercise?.content.text.length - 1 &&
