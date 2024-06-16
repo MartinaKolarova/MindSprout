@@ -4,7 +4,7 @@ export default function handler(req, res) {
   res.status(200).json([
     {
       id: 0,
-      target: 'První uvolnění',
+      target: 'PRVNÍ UVOLNĚNÍ',
       targetId: 'stabilization',
       nameOfRelaxation: 'Základní dechové cvičení pro získání klidu',
       keyWords: 'Dýchej',
@@ -23,10 +23,10 @@ export default function handler(req, res) {
     },
     {
       id: 1,
-      target: 'První uvolnění',
+      target: 'PRVNÍ UVOLNĚNÍ',
       targetId: 'stabilization',
       nameOfRelaxation: 'Základní progresivní svalová relaxace',
-      keyWords: 'Zatni ruce v pěst a uvolni',
+      keyWords: 'Zatni ruce v pěst',
       typeOfRelaxation: 'Progresivně svalová relaxace',
       formOfRelaxation: 'Psaný text',
       content: {
@@ -44,7 +44,7 @@ export default function handler(req, res) {
     },
     {
       id: 2,
-      target: 'První uvolnění',
+      target: 'PRVNÍ UVOLNĚNÍ',
       targetId: 'stabilization',
       nameOfRelaxation: 'Tipy na to, jak aktuálně zpomalit',
       keyWords: 'Zpomal svůj pohyb',
@@ -57,7 +57,7 @@ export default function handler(req, res) {
     },
     {
       id: 3,
-      target: 'vnímání pocitů, problémů a sám sebe',
+      target: 'VNÍMÁNÍ SEBE SAMA',
       targetId: 'selfperception',
       nameOfRelaxation: 'Jak tu být sám pro sebe',
       keyWords: 'Buď sám pro sebe',
@@ -83,7 +83,7 @@ export default function handler(req, res) {
     },
     {
       id: 4,
-      target: 'vnímání pocitů, problémů a sám sebe',
+      target: 'VNÍMÁNÍ SEBE SAMA',
       targetId: 'selfperception',
       nameOfRelaxation: 'Arteterapeutický superhrdina (kresba, psaní)',
       keyWords: 'Tvoř svého superhrdinu',
@@ -102,7 +102,7 @@ export default function handler(req, res) {
     },
     {
       id: 5,
-      target: 'vnímání pocitů, problémů a sám sebe',
+      target: 'VNÍMÁNÍ SEBE SAMA',
       targetId: 'selfperception',
       nameOfRelaxation: 'Imaginace pro navození pocitu sebelásky a soucitu',
       keyWords: 'Zažij soucit',
@@ -115,7 +115,7 @@ export default function handler(req, res) {
     },
     {
       id: 6,
-      target: 'řešení problému, změna, vlastní aktivita',
+      target: 'ZMĚNA',
       targetId: 'problemsolving',
       nameOfRelaxation: 'Tipy k asertivní a respektující komunikaci',
       keyWords: 'Řešení promluvou',
@@ -142,7 +142,7 @@ export default function handler(req, res) {
     },
     {
       id: 7,
-      target: 'řešení problému, změna, vlastní aktivita',
+      target: 'ZMĚNA',
       targetId: 'problemsolving',
       nameOfRelaxation: 'Jak se někomu svěřit',
       keyWords: 'Svěř se',
@@ -162,7 +162,7 @@ export default function handler(req, res) {
     },
     {
       id: 8,
-      target: 'řešení problému, změna, vlastní aktivita',
+      target: 'ZMĚNA',
       targetId: 'problemsolving',
       nameOfRelaxation: 'Co dělat, když nevidím řešení',
       keyWords: 'Tohle řešit nejde',
@@ -184,10 +184,10 @@ export default function handler(req, res) {
     },
     {
       id: 9,
-      target: 'vnímání pocitů, problémů a sám sebe',
+      target: 'VNÍMÁNÍ SEBE SAMA',
       targetId: 'selfperception',
       nameOfRelaxation: 'Jak se smířit s omezením svého vlivu',
-      keyWords: 'Ne vše lze vždy ovlivnit',
+      keyWords: 'Ne vše lze ovlivnit',
       typeOfRelaxation: 'Imaginace a vizualizace',
       formOfRelaxation: 'Psaný text',
       content: {
@@ -211,7 +211,7 @@ export default function handler(req, res) {
     },
     {
       id: 10,
-      target: 'řešení problému, změna, vlastní aktivita',
+      target: 'ZMĚNA',
       targetId: 'problemsolving',
       nameOfRelaxation:
         'Tipy na změnu nesouvisející s problémem aka Udělej si to hezký',
@@ -238,7 +238,7 @@ export default function handler(req, res) {
     },
     {
       id: 11,
-      target: 'vnímání pocitů, problémů a sám sebe',
+      target: 'VNÍMÁNÍ SEBE SAMA',
       targetId: 'selfperception',
       nameOfRelaxation: 'Jak poznat, že s námi někdo manipuluje',
       keyWords: 'Řekni NE manipulaci',
@@ -265,7 +265,7 @@ export default function handler(req, res) {
     },
     {
       id: 12,
-      target: 'První uvolnění',
+      target: 'PRVNÍ UVOLNĚNÍ',
       targetId: 'stabilization',
       nameOfRelaxation: 'Základní meditace uvolnění',
       keyWords: 'Uvolni mysl',

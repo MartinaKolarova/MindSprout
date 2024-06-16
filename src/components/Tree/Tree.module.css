@@ -7,6 +7,17 @@
     margin-top: 8vh;
 }
 
+.titleTree {
+    width: 50vw;
+    height: 50vh;
+    
+}
+
+.titleTreeText {
+    width: 50vw;
+    height: 50vh;
+}
+
 .endbox {
     display: flex;
     justify-content: center;
