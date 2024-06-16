@@ -1,38 +1,39 @@
 .header {
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   position: relative;
   padding: 2%;
   background-color: #f2c7bfff;
   height: 8vh;
 }
 
-.container {
-  width: 100%;
-  display: flex;
-}
 
 .subcontainer {
   width: 100%;
-  margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start ;
+  align-items: flex-start;
   max-height: 100%;
 }
-
-.logo {
+.logoLink{
+  max-height: 100%;
   width: 50%;
+}
+.logo {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
-/* .logoTitle {
-} */
+.logoTitle {
+  color: #515878ff;
+  flex-wrap: nowrap;
+
+}
 
 .navbar {
   width: 50%;
@@ -44,9 +45,8 @@
 }
 
 .navMenu {
-  position: fixed;
-  left: -100%;
-  top: 60px;
+  position: absolute;
+  top: 0;
   flex-direction: column;
   background-color: transparent;
   width: 100%;
@@ -55,17 +55,18 @@
   gap: 10px;
   list-style: none;
   color: white;
+  display: none; 
 }
 
 .navMenu.active {
   left: 0;
-  background-color: rgb(242, 199, 191);
-
+  top: 8vh;
+  background-color: #f2c7bfff;
+  display: flex; 
 }
 
 .navItem {
   margin: 16px 0;
-
 }
 
 .navMenu a {
@@ -74,8 +75,8 @@
 }
 
 .navLink {
-  color: black;
-  text-decoration: none;
+  color: #515878ff;
+  
 }
 
 .activeLink {
@@ -114,22 +115,21 @@
     display: none;
   }
 
-  .imgLogo {
-    width: auto;
-    height: 70%;
-  }
-
   .navMenu {
-    display: flex;
+    display: flex; 
     position: static;
     flex-direction: row;
     justify-content: flex-end;
     gap: 20px;
     text-align: left;
     background-color: transparent;
-    color: whitesmoke;
-    font-size: larger;
-    font-weight: bold;
+    color: #515878ff;
+  }
+
+  .navMenu.active {
+    left: auto;
+    top: auto;
+    background-color: transparent;
   }
 
   .navItem {
