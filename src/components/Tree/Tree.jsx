@@ -1,79 +1,69 @@
-import { Bubble } from "./Bubble/Bubble";
-import { Dialog } from "./Dialog/Dialog";
-import styles from "./Tree.module.css";
-import { useState, useEffect, useMemo } from "react";
-import Link from "next/link";
+import { Bubble } from './Bubble/Bubble';
+import { Dialog } from './Dialog/Dialog';
+import styles from './Tree.module.css';
+import { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
 import {
   FacebookMessengerShareButton,
   FacebookMessengerIcon,
   FacebookShareButton,
   FacebookIcon,
-} from "next-share";
-import Image from "next/image";
-
+} from 'next-share';
+import Image from 'next/image';
 export const Tree = ({ category }) => {
-  const [phase, setPhase] = useState("stabilization");
+  const [phase, setPhase] = useState('stabilization');
   const [selectedExercise, setSelectedExercise] = useState(null);
   const [exercises, setExercises] = useState([]);
   const currentPhaseExercises = exercises.filter((exercise) => {
     return exercise.targetId === phase;
   });
-
   useEffect(() => {
     if (category === null) {
-      setPhase("stabilization");
+      setPhase('stabilization');
     }
   }, [category]);
-
   const getRandomSubset = (arr, size) => {
     const shuffled = arr.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, size);
   };
-
   const subset = useMemo(
     () => getRandomSubset(currentPhaseExercises, 3),
-    [category, currentPhaseExercises.length]
+    [category, currentPhaseExercises.length],
   );
-
   const determineTree = (phase) => {
-    if (phase === "stabilization") {
-      return "tree1.png";
-    } else if (phase === "selfperception") {
-      return "tree2.png";
-    } else if (phase === "problemsolving") {
-      return "tree3.png";
-    } else if (phase === "userHasFinished") {
-      return "tree4.png";
+    if (phase === 'stabilization') {
+      return 'tree1.png';
+    } else if (phase === 'selfperception') {
+      return 'tree2.png';
+    } else if (phase === 'problemsolving') {
+      return 'tree3.png';
+    } else if (phase === 'userHasFinished') {
+      return 'tree4.png';
     } else {
       return null;
     }
   };
-
   const currentTreeUrl = determineTree(phase);
-
   useEffect(() => {
     if (category === 1) {
       const fetchExercises = async () => {
-        const response = await fetch("/api/friends");
+        const response = await fetch('/api/friends');
         const json = await response.json();
         setExercises(json);
       };
-
       fetchExercises();
     }
   }, [category]);
-
   const handleFinishExercise = () => {
-    if (phase === "stabilization") {
-      setPhase("selfperception");
-    } else if (phase === "selfperception") {
-      setPhase("problemsolving");
-    } else if (phase === "problemsolving") {
-      setPhase("userHasFinished");
+    if (phase === 'stabilization') {
+      setPhase('selfperception');
+    } else if (phase === 'selfperception') {
+      setPhase('problemsolving');
+    } else if (phase === 'problemsolving') {
+      setPhase('userHasFinished');
     }
     setSelectedExercise(null);
   };
-
   if (category === null) {
     return null;
   } else if (category !== 1) {
@@ -83,11 +73,9 @@ export const Tree = ({ category }) => {
       </div>
     );
   }
-
   const handleCloseExercise = () => {
     setSelectedExercise(null);
   };
-
   return (
     <div className={styles.mainContainer}>
       <div className={styles.treeImageCard}>
@@ -100,7 +88,7 @@ export const Tree = ({ category }) => {
           priority
         />
       </div>
-      {phase === "userHasFinished" ? (
+      {phase === 'userHasFinished' ? (
         <div className={styles.endbox}>
           <div className={styles.sharebox}>
             <p>
@@ -108,18 +96,17 @@ export const Tree = ({ category }) => {
               ji rád/a doporučil někomu jinému, můžeš nás sdílet.
             </p>
             <FacebookShareButton
-              url={"https://mind-sprout.vercel.app/"}
+              url={'https://mind-sprout.vercel.app/'}
               quote={
-                "MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví"
+                'MindSprout je stránka pomáhající teenagerům pečovat o své psychické zdraví'
               }
-              hashtag={"#mindsprout"}
+              hashtag={'#mindsprout'}
             >
               <FacebookIcon size={40} round />
             </FacebookShareButton>
-
             <FacebookMessengerShareButton
-              url={"https://mind-sprout.vercel.app/"}
-              appId={""}
+              url={'https://mind-sprout.vercel.app/'}
+              appId={''}
             >
               <FacebookMessengerIcon size={40} round />
             </FacebookMessengerShareButton>

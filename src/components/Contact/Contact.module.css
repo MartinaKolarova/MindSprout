@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 20px;
   margin-top: 60px;
-  background-color: white;
 }
 
 .contact {
@@ -17,7 +16,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .contactButton {
   display: inline-block;
