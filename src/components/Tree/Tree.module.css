@@ -7,15 +7,23 @@
     margin-top: 8vh;
 }
 
-.titleTree {
+/* .titleTree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50vw;
     height: 50vh;
-    
-}
+    font-size: 20px;
+    font-weight: 800;
+} */
 
 .titleTreeText {
-    width: 50vw;
-    height: 50vh;
+    color: rgba(45, 39, 34, 0.622);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .endbox {
@@ -131,7 +139,13 @@
         width: 50vw;
         height: 50vh;
     }
+
+    .titleTreeText {
+        font-weight: 700;
+        font-size: 40px;
+    }
 }
+
 
 @media (min-width: 1025px) {
 
@@ -195,5 +209,10 @@
     .treeImageCard {
         height: auto;
         width: 25vw;
+    }
+
+    .titleTreeText {
+        font-weight: 700;
+        font-size: 45px;
     }
 }
