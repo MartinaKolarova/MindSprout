@@ -1,6 +1,10 @@
 .main {
   width: 100vw;
+<<<<<<< HEAD
   height: 100vh;
+=======
+  text-align: center;
+>>>>>>> 55a159802f128e41ea6af221cb053ef594938cba
 }
 
 .appcontainer {
@@ -254,7 +258,7 @@
   position: relative;
 }
 
-@media (min-aspect-ratio: 11/6) {
+@media (min-aspect-ratio: 11/5) {
   .appcontainer {
     background-size: cover;
   }

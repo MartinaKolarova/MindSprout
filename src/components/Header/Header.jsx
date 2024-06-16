@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import styles from "./style.module.css";
-import Link from "next/link";
-import { Love_Ya_Like_A_Sister } from "next/font/google";
-import Image from "next/image";
+import React, { useState } from 'react';
+import styles from './style.module.css';
+import Link from 'next/link';
+import { Love_Ya_Like_A_Sister } from 'next/font/google';
+import Image from 'next/image';
 
 const love_ya_like_a_sister = Love_Ya_Like_A_Sister({
-  weight: "400",
-  subsets: ["latin"],
+  weight: '400',
+  subsets: ['latin'],
 });
 
-export const Header = () => {
+export const Header = ({ handleHome }) => {
   const [isHamburgerActive, setIsHamburgerActive] = useState(false);
   const [isNavMenuActive, setIsNavMenuActive] = useState(false);
 
@@ -21,6 +21,7 @@ export const Header = () => {
   const closeMenu = () => {
     setIsHamburgerActive(false);
     setIsNavMenuActive(false);
+    handleHome();
   };
 
   return (
@@ -45,15 +46,11 @@ export const Header = () => {
           <nav className={styles.navbar}>
             <ul
               className={`${styles.navMenu} ${
-                isNavMenuActive ? styles.active : ""
+                isNavMenuActive ? styles.active : ''
               }`}
             >
               <li className={styles.navItem}>
-                <Link
-                  href="/index.jsx"
-                  className={styles.navLink}
-                  onClick={closeMenu}
-                >
+                <Link href="/" className={styles.navLink} onClick={closeMenu}>
                   Domů
                 </Link>
               </li>
@@ -69,7 +66,7 @@ export const Header = () => {
             </ul>
             <div
               className={`${styles.hamburger} ${
-                isHamburgerActive ? styles.active : ""
+                isHamburgerActive ? styles.active : ''
               }`}
               onClick={toggleHamburger}
             >

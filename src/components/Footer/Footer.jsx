@@ -10,8 +10,8 @@ export const Footer = () => {
       <p>
         © 2024, Webová stránka vytvořena v rámci Webové akademie Czechitas
         autory:
-        <a href="https://github.com/autor1"> Martina</a>,
-        <a href="https://github.com/autor2"> Nikol</a>
+        <a href="https://github.com/MartinaKolarova"> Martina</a>,
+        <a href="https://github.com/NikolKarnikova"> Nikol</a>
       </p>
     </footer>
   );

@@ -18,11 +18,59 @@ export default function Home() {
         </div>
         <div>
           <p>
-            The Things That Keep Us Here by Scott Buckley |
-            https://soundcloud.com/scottbuckley Music promoted by
-            https://www.free-stock-music.com Creative Commons / Attribution 4.0
-            International (CC BY 4.0)
-            https://creativecommons.org/licenses/by/4.0/
+           <br /> 1. The Things That Keep Us Here by Scott Buckley <br />
+            <a href="https://soundcloud.com/scottbuckley">
+              Scott Buckley Soundcloud
+            </a>
+            <br />
+            Music promoted by:<> </>
+            <a href="https://www.free-stock-music.com">
+              https://www.free-stock-music.com
+            </a>
+            <br />
+            Creative Commons / Attribution 4.0 International (CC BY 4.0) <br />{' '}
+            <a href="https://creativecommons.org/licenses/by/4.0/">License</a>
+          </p>
+          <br />
+          <p>
+            2. Ethereal by Punch Deck <br />{' '}
+            <a href="https://soundcloud.com/punch-deck ">
+              Punch Deck Soundcloud
+            </a>
+            <br />
+            Music promoted by:<> </>
+            <a href="https://www.free-stock-music.com  /">
+              <br /> https://www.free-stock-music.com
+            </a>{' '}
+            <br />
+            Creative Commons / Attribution 3.0 Unported License (CC BY 3.0)
+            <a href="https://creativecommons.org/licenses/by/3.0/deed.en_US">
+              License
+            </a>
+          </p>
+          <br />{' '}
+          <p>
+            3. Celestia by Ghostrifter Official <br />
+            <a href="  https://soundcloud.com/ghostrifter-official">
+              Ghostrifter Official SoundCloud
+            </a>
+            <br />
+            Music promoted by <> </>{' '}
+            <a href="https://www.free-stock-music.com">
+              https://www.free-stock-music.com
+            </a>{' '}
+            <br />
+            Creative Commons / Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0){' '}
+            <a href="https://creativecommons.org/licenses/by-nd/3.0/">
+              License
+            </a>
+          </p>
+          <br />
+          <p>
+            4. Clouds by Alex-Productions <br /> <a href="https://onsound.eu/">Onsound.eu</a> <br />Music promoted by<> </>
+            <a href="https://www.free-stock">https://www.free-stock</a><br />Creative Commons / Attribution 3.0
+            Unported License (CC BY 3.0) <a href="https://creativecommons.org/licenses/by/3.0/deed.en_US">License</a>
+            
           </p>
         </div>
       </main>

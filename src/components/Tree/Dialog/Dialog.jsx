@@ -1,27 +1,33 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Modal from "react-modal";
-import { useState } from "react";
-import styles from "./Dialog.module.css";
-import classNames from "classnames";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+import { useState } from 'react';
+import styles from './Dialog.module.css';
+import classNames from 'classnames';
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    height: "90vh",
-    width: "90vw",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    height: '90vh',
+    width: '90vw',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 };
 
-Modal.setAppElement("#__next");
+Modal.setAppElement('#__next');
 export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,21 +40,23 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
   };
 
   return (
-    <div>
+    <div className={styles.roboto}>
       <Modal
         isOpen={!!exercise}
         style={customStyles}
         contentLabel="Example Modal"
         className={classNames(styles.modalContent, styles.grit)}
       >
-        <div className={styles.dialogcontainer}>
+        <div className={classNames(styles.dialogcontainer, styles.roboto)}>
           {exercise?.content.audio ? (
             <audio controls>
               <source src={exercise.content.audio} type="audio/mpeg" />
-              Váš prohlížeč nepodporuje tento audio soubor{" "}
+              Váš prohlížeč nepodporuje tento audio soubor{' '}
             </audio>
           ) : (
-            <h2 className={styles.exercisetitle}>{exercise?.keyWords}</h2>
+            <h2 className={classNames(styles.exercisetitle, styles.roboto)}>
+              {exercise?.keyWords}
+            </h2>
           )}
           <button
             className={classNames(styles.crossbutton)}
@@ -61,7 +69,7 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
             {exercise?.content.text[currentIndex]}
           </div>
           <div className={styles.bottomBar}>
-            {currentIndex > 0 && exercise?.content.text !== "" ? (
+            {currentIndex > 0 && exercise?.content.text !== '' ? (
               <button className={styles.leftArrow} onClick={handleLeft}>
                 <span></span>
                 <span></span>
@@ -71,7 +79,7 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
               Mám hotovo
             </button>
             {currentIndex < exercise?.content.text.length - 1 &&
-            exercise?.content.text !== "" ? (
+            exercise?.content.text !== '' ? (
               <button className={styles.rightArrow} onClick={handleRight}>
                 <span></span>
                 <span></span>
