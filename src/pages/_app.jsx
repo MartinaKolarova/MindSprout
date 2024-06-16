@@ -1,14 +1,11 @@
 import '@/styles/globals.css';
-import { Roboto } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-});
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={roboto.className}>
+    <main className={montserrat.className}>
       <Component {...pageProps} />
     </main>
   );
