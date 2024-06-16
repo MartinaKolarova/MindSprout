@@ -92,8 +92,8 @@ export const Tree = ({ category }) => {
         src={`/${currentTreeUrl}`}
         alt="Rostoucí strom"
         className={styles.treeImg}
-        width={70}
-        height={50}
+        width={570}
+        height={816}
         priority
       />
       {phase === "userHasFinished" ? (

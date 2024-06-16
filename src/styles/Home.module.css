@@ -1,17 +1,12 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   width: 100vw;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 .appcontainer {
   background-image: url(pozadi.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: rgb(220, 217, 213);
   min-height: 100vh;
 }
 

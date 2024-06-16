@@ -1,150 +1,34 @@
-.navContainer {
+.choiceContainer{
+    width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.textContainer {
-    margin-top: -5vh;
-    max-width: 20vh;
-    display: flex;
-    flex-direction: column;
-    padding: 3%;
+    align-items: center;
+    margin-top: 40%;
     gap: 5vh;
 }
 
-.introduction {
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    position: relative;
-    background-color: #bfa790;
-    color: #474840;
-    font-size: 14px;
-    border-radius: 29% 71% 75% 25% / 61% 41% 59% 39%;
-    width: 250px;
-    height: 170px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 3px;
-    margin-top: 25vh;
-}
-
-.guidance {
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    font-size: 14px;
-    position: relative;
-    border-radius: 75% 25% 47% 53% / 53% 72% 28% 47%;
-    background-color: #bfa790;
-    color: #474840;
-    width: 250px;
-    height: 180px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-}
-
-.buttonsContainer {
-    margin-top: 20px;
-    display: flex;
+.textContainer{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 20px;
+    margin: 5%;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
+.buttonsContainer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+}
 
-.navButton {
-    border: transparent;
-    background-color: #f5d6d6;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.navButton{
     width: 70vw;
-    height: 8vh;
-    border-radius: 20px;
-    color: #474840;
-    transition: background-color 0.3s, color 0.3s;
-
+    height: 3em;
+    border: none;
+    background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-
-.navButton:hover {
-    background-color: #ac9595;
-    color: #f6d9ce;
-    ;
-}
-@media (min width: 768px)
-{
-    
-}
-@media (min-width: 1024px) {
-    .buttonsContainer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .navButton {
-        width: 25vw;
-
-
-    }
-
-}
-
-/* /<svg width={400} height={130}>
-<path id={styles.curve} d="M 20 120 C 0 20, 50 0, 160 120"></path>
-<text className={styles.text}>
-  <textPath href={`#${styles.curve}`} className={styles.textPath} startOffset="5%"> 
-  Tahle appka ti pomůže cítit se líp a naučit se řešit svoje problémy
-  tak, aby tě příště nerozhodily.            </textPath>
-</text>
-</svg> 
-<ReactCurvedText className={styles.curvedTextFirst}
-          width={370}
-          height={300}
-          cx={65}
-          cy={140}
-          rx={80}
-          ry={100}
-          startOffset={50}
-          reversed={true}
-          text="Tahle appka ti pomůže cítit se líp a naučit se"
-          textProps={{ style: { fontSize: 10 } }}
-          textPathProps={null}
-          tspanProps={{"dy" : "16"}}
-          ellipseProps={null}
-          svgProps={null}
-        />
-        <ReactCurvedText
-        className={styles.curvedTextSecond}
-          width={370}
-          height={300}
-          cx={140}
-          cy={50}
-          rx={100}
-          ry={100}
-          startOffset={50}
-          reversed={false}
-          text="řešit svoje problémy
-        tak, aby tě příště nerozhodily"
-          textProps={{ style: { fontSize: 10 } }}
-          textPathProps={null}
-          tspanProps={null}
-          ellipseProps={null}
-          svgProps={null}
-        />
-        #curve {
-            fill: transparent;
-        }
-        
-        .text {
-
-        }
-        
-        .textPath {
-
-        }
-       */
