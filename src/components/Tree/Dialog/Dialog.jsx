@@ -75,8 +75,10 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
           <div className={styles.bottomBar}>
             {currentIndex > 0 && exercise?.content.text !== "" ? (
               <button className={styles.leftArrow} onClick={handleLeft}>
-                <span></span>
-                <span></span>
+                <div className={styles.arrowWrapper}>
+                  <span></span>
+                  <span></span>
+                </div>
               </button>
             ) : null}
             <button
@@ -88,8 +90,10 @@ export const Dialog = ({ exercise, finishExercise, closeExercise }) => {
             {currentIndex < exercise?.content.text.length - 1 &&
             exercise?.content.text !== "" ? (
               <button className={styles.rightArrow} onClick={handleRight}>
-                <span></span>
-                <span></span>
+                <div className={styles.arrowWrapper}>
+                  <span></span>
+                  <span></span>
+                </div>
               </button>
             ) : null}
           </div>
