@@ -9,7 +9,7 @@ const love_ya_like_a_sister = Love_Ya_Like_A_Sister({
   subsets: ["latin"],
 });
 
-export const Header = ({ handleHome }) => {
+export const Header = ({ handleHome, category }) => {
   const [isHamburgerActive, setIsHamburgerActive] = useState(false);
   const [isNavMenuActive, setIsNavMenuActive] = useState(false);
 
@@ -25,7 +25,11 @@ export const Header = ({ handleHome }) => {
   };
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header}  ${
+        category !== null ? styles.headerColor : ""
+      }`}
+    >
       <div className={styles.subcontainer}>
         <Link href="/" className={styles.logoLink} onClick={closeMenu}>
           <div className={styles.logo}>
@@ -51,7 +55,7 @@ export const Header = ({ handleHome }) => {
           <ul
             className={`${styles.navMenu} ${
               isNavMenuActive ? styles.active : ""
-            }`}
+            } ${category !== null ? styles.headerColor : ""}`}
           >
             <li className={styles.navItem}>
               <Link href="/" className={styles.navLink} onClick={closeMenu}>

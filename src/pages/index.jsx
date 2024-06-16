@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <Header handleHome={handleBack}></Header>
+      <Header category={chosenCategory} handleHome={handleBack}></Header>
 
       <div className={styles.appcontainer}>
         <Head>

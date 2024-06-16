@@ -8,7 +8,6 @@
   height: 8vh;
 }
 
-
 .subcontainer {
   width: 100%;
   display: flex;
@@ -56,12 +55,14 @@
   list-style: none;
   color: white;
   display: none; 
+  background-color: #f2c7bfff;
+
 }
 
 .navMenu.active {
   left: 0;
   top: 8vh;
-  background-color: #f2c7bfff;
+  /* background-color: #f2c7bfff; */
   display: flex; 
 }
 
@@ -108,6 +109,9 @@
 
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+.headerColor{
+  background-color: rgb(222, 219, 213);
 }
 
 @media (min-width: 768px) {
