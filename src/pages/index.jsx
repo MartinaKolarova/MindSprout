@@ -1,12 +1,12 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '@/styles/Home.module.css';
-import { Header } from '@/components/Header/Header';
-import { Contact } from '@/components/Contact/Contact';
-import { Footer } from '@/components/Footer/Footer';
-import { Tree } from '@/components/Tree/Tree';
-import { TreeNavigation } from '@/components/TreeNavigation/TreeNavigation';
-import { useState, useRef } from 'react';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "@/styles/Home.module.css";
+import { Header } from "@/components/Header/Header";
+import { Contact } from "@/components/Contact/Contact";
+import { Footer } from "@/components/Footer/Footer";
+import { Tree } from "@/components/Tree/Tree";
+import { TreeNavigation } from "@/components/TreeNavigation/TreeNavigation";
+import { useState, useRef } from "react";
 
 export default function Home() {
   const [chosenCategory, setChosenCategory] = useState(null);
@@ -29,30 +29,29 @@ export default function Home() {
   // };
 
   return (
-    <div className={styles.appcontainer}>
+    <>
       <Header handleHome={handleBack}></Header>
-      <Head>
-        <title>Mind Sprout</title>
-        <meta
-          name="description"
-          content="Aplikace na podporu psychohygieny teenagerů"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {chosenCategory && <div className={styles.backgroundOverlay}></div>}
-      <main className={styles.main}>
-        {chosenCategory !== null && (
-          <button className={styles.backButton} onClick={handleBack}>
-            zpět
-          </button>
-        )}
-        {chosenCategory === null && <TreeNavigation onClick={handleClick} />}
-      </main>
-      <div ref={treeRef}>
-        <Tree category={chosenCategory} />
+
+      <div className={styles.appcontainer}>
+        <Head>
+          <title>Mind Sprout</title>
+          <meta
+            name="description"
+            content="Aplikace na podporu psychohygieny teenagerů"
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        {chosenCategory && <div className={styles.backgroundOverlay}></div>}
+        <main className={styles.main}>
+          {chosenCategory !== null && <div className={styles.blank} />}
+          {chosenCategory === null && <TreeNavigation onClick={handleClick} />}
+        </main>
+        <div ref={treeRef}>
+          <Tree category={chosenCategory} />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 }
