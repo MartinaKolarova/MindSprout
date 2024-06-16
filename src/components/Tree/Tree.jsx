@@ -11,6 +11,7 @@ import {
 } from 'next-share';
 import Image from 'next/image';
 export const Tree = ({ category }) => {
+  const [target, setTarget] = useState('PRVNÍ UVOLNĚNÍ');
   const [phase, setPhase] = useState('stabilization');
   const [selectedExercise, setSelectedExercise] = useState(null);
   const [exercises, setExercises] = useState([]);
@@ -20,6 +21,7 @@ export const Tree = ({ category }) => {
   useEffect(() => {
     if (category === null) {
       setPhase('stabilization');
+      setTarget('PRVNÍ UVOLNĚNÍ');
     }
   }, [category]);
   const getRandomSubset = (arr, size) => {
@@ -57,9 +59,12 @@ export const Tree = ({ category }) => {
   const handleFinishExercise = () => {
     if (phase === 'stabilization') {
       setPhase('selfperception');
+      setTarget('VNÍMÁNÍ SEBE SAMA');
     } else if (phase === 'selfperception') {
+      setTarget('ZMĚNA');
       setPhase('problemsolving');
     } else if (phase === 'problemsolving') {
+      setTarget('');
       setPhase('userHasFinished');
     }
     setSelectedExercise(null);
@@ -78,6 +83,9 @@ export const Tree = ({ category }) => {
   };
   return (
     <div className={styles.mainContainer}>
+      {/* <div className={styles.titleTree}> */}
+        <p className={styles.titleTreeText}>{phase === 'userHasFinished' ? null : target}</p>
+      {/* </div> */}
       <div className={styles.treeImageCard}>
         <Image
           src={`/${currentTreeUrl}`}
@@ -135,7 +143,6 @@ export const Tree = ({ category }) => {
                 exercise={exercise}
                 exerciseContent={exercise.content.text}
                 key={exercise.id}
-                
               />
             ))}
           </div>
