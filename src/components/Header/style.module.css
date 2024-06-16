@@ -111,7 +111,7 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 .headerColor{
-  background-color: rgb(222, 219, 213);
+  background-color: rgb(223, 214, 210);
 }
 
 @media (min-width: 768px) {

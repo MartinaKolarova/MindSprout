@@ -26,7 +26,7 @@ export const Header = ({ handleHome, category }) => {
 
   return (
     <header
-      className={`${styles.header}  ${!category ? styles.headerColor : ""}`}
+      className={`${styles.header}  ${category ? styles.headerColor : ""}`}
     >
       <div className={styles.subcontainer}>
         <Link href="/" className={styles.logoLink} onClick={closeMenu}>
@@ -53,7 +53,7 @@ export const Header = ({ handleHome, category }) => {
           <ul
             className={`${styles.navMenu} ${
               isNavMenuActive ? styles.active : ""
-            } ${!category ? styles.headerColor : ""}`}
+            } ${category ? styles.headerColor : ""}`}
           >
             <li className={styles.navItem}>
               <Link href="/" className={styles.navLink} onClick={closeMenu}>
