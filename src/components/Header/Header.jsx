@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import styles from './style.module.css';
-import Link from 'next/link';
-import { Love_Ya_Like_A_Sister } from 'next/font/google';
-import Image from 'next/image';
+import React, { useState } from "react";
+import styles from "./style.module.css";
+import Link from "next/link";
+import { Love_Ya_Like_A_Sister } from "next/font/google";
+import Image from "next/image";
 
 const love_ya_like_a_sister = Love_Ya_Like_A_Sister({
-  weight: '400',
-  subsets: ['latin'],
+  weight: "400",
+  subsets: ["latin"],
 });
 
 export const Header = ({ handleHome }) => {
@@ -28,25 +28,27 @@ export const Header = ({ handleHome }) => {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.subcontainer}>
-          <div className={styles.logo}>
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              className={styles.imgLogo}
-              width={50}
-              height={37}
-              priority
-            />
-            <p
-              className={`${love_ya_like_a_sister.className} ${styles.logoTitle}`}
-            >
-              Mind Sprout
-            </p>
-          </div>
+          <a href="/" className={styles.navLink}>
+            <div className={styles.logo}>
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                className={styles.imgLogo}
+                width={50}
+                height={37}
+                priority
+              />
+              <p
+                className={`${love_ya_like_a_sister.className} ${styles.logoTitle}`}
+              >
+                Mind Sprout
+              </p>
+            </div>
+          </a>
           <nav className={styles.navbar}>
             <ul
               className={`${styles.navMenu} ${
-                isNavMenuActive ? styles.active : ''
+                isNavMenuActive ? styles.active : ""
               }`}
             >
               <li className={styles.navItem}>
@@ -66,7 +68,7 @@ export const Header = ({ handleHome }) => {
             </ul>
             <div
               className={`${styles.hamburger} ${
-                isHamburgerActive ? styles.active : ''
+                isHamburgerActive ? styles.active : ""
               }`}
               onClick={toggleHamburger}
             >

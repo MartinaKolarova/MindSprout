@@ -4,12 +4,12 @@
   z-index: 2;
   position: relative;
   padding: 2%;
+  background-color: #f2c7bfff;
+  height: 8vh;
 }
 
 .container {
   width: 100%;
-  margin: auto;
-  padding: 0 20px;
   display: flex;
 }
 
@@ -19,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start ;
+  max-height: 100%;
 }
 
 .logo {
@@ -58,14 +59,17 @@
 
 .navMenu.active {
   left: 0;
+  background-color: rgb(242, 199, 191);
+
 }
 
 .navItem {
   margin: 16px 0;
+
 }
 
 .navMenu a {
-  color: black;
+  color: #515878ff;
   text-decoration: none;
 }
 
@@ -90,7 +94,7 @@
   height: 3px;
   margin: 5px 0;
   transition: all 0.3s ease;
-  background-color: black;
+  background-color: #515878ff;
 }
 
 .hamburger.active .bar:nth-child(2) {

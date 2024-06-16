@@ -7,6 +7,19 @@
   text-align: center;
 }
 
+.mainCredits{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  text-align: center;
+  padding: 15px;
+  background-color:rgb(249, 241, 229);
+  height: 100vh;
+
+}
+
 .appcontainer {
   background-image: url(backgroundimage.png);
   background-size: contain;
@@ -54,6 +67,11 @@
   background-color: rgba(var(--callout-rgb), 0.5);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
+}
+
+.blank{
+  width: 0;
+  height: 0;
 }
 
 .code {

@@ -64,6 +64,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    transform: scale(1.03);
 }
 
 .bubbles {
